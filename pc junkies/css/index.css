@@ -1,0 +1,144 @@
+header{
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+}
+header figure{
+    display: block;
+    width: 20%;
+    margin: 2% 2%; 
+}
+figure img{
+    max-width: 100%;
+    max-height: 100%;
+}
+#monitor{
+    display: none;
+    width: 0%;
+}
+header div{
+    width: 70%;
+}
+header p{
+    float: right;
+    width: 10%;
+    margin-left: 5%;
+    max-width: 40px;
+}
+main{
+    margin: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#first-part{
+    height: 78vh;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 40% 40% 20%;
+    justify-items: center;
+    background-image: url("../images/backround-crop.png");
+    background-repeat: no-repeat;
+    background-size: 120%;
+    background-position-y: bottom;
+    background-position-x: center;
+}
+#text{
+    text-align: right;
+    line-height: 120%;
+}
+#news{
+    width: 100%;
+    border: 2px solid rgb(0, 68, 0);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    overflow-y: scroll;
+    margin-bottom: 10%;
+}
+#news h1{
+    color: white;
+    background-color: rgb(0, 68, 0);
+    padding: 1%;
+    margin: 0%;
+}
+#news p{
+    margin-left: 1%;
+}
+#first-part button{
+    border: none;
+    background-color: transparent;
+}
+#first-part button:hover{
+    font-weight: bold;
+}
+#contact{
+    font-size: 1.2em;
+    color: rgb(0, 68, 0);
+}
+#arrow{
+    width: 50%;
+    max-width: 90px;
+    padding: 0px;
+}
+main p{
+    font-size: 2em;
+}
+
+
+#second-part{
+    background-color: black;
+    padding: 10%;
+    margin: 0px;
+    height: 100vh; 
+    color: white;
+    font-size: 0.8em;
+}
+.icons{
+    width: 10%;
+    max-width: 60px;
+}
+
+@media screen and (max-width:430px){
+    #first-part button{
+        width: 20%;
+        margin: auto 48% 1% 32%;
+    }
+}
+
+@media screen and (min-width:800px){
+    #monitor{
+        display: block;
+        width: 100%;
+    }
+    #mobile{
+        display: none;
+        width: 0%;
+    }
+    #insta{
+        margin-right: 7%;
+    }
+    #first-part{
+        display: grid;
+        grid-template-columns: 48.5% 5% 48.5%;
+        grid-template-rows: 75% 15% 10%;
+        background-size: 70%;
+    }
+    #text{
+        grid-column: 1 / 2;
+        font-size: 2em;
+        line-height: 150%;
+        margin-right: 2%;
+    }
+    #news{
+        grid-column: 3 / 4;
+        margin-right: 10%;
+        margin-left: 2%;
+    }
+    button{
+        grid-column: 1 / 4;
+    }
+    
+}
+@media screen and (min-width:1330px){
+    #text{
+        font-size: 3em;
+    }
+}
