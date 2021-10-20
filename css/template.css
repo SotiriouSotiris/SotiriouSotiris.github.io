@@ -1,0 +1,287 @@
+/*author: Sotiris Sotiriou*/
+
+/*Mobile screen size*/
+
+    /*Main area styling*/
+    main{
+        display: flex;
+        flex-direction: column;
+        padding: 5% 0px 5% 0px;
+        font-size: 1.5em;
+        color: rgb(0,0,128);
+        width: 95vw;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+    }
+    #backToTop{
+        width: 60px;
+        display: none;
+        position: fixed;
+        bottom: 3%;
+        right: 3%;
+        border-radius: 50%;
+        border: none;
+        background-color: rgb(0,0,128);
+        color: white;
+        padding: 3px 15px;
+        z-index: 98;
+        cursor: pointer;
+    }
+    /* #backToTop:hover{
+        background-color: rgb(231, 231, 231);
+        color: rgb(0,0,128);
+    } */
+    #toTopSVG:hover{
+        transform:translateY(-5px);
+        transition: 0.3s;
+    }
+    #first-part{
+        padding-bottom: 5vh;
+        height: 85vh;
+    }
+    #first-part figure{
+        margin: 0px;
+        padding: 0px;
+        position: relative;
+        width: 100%;
+        max-width: 400px;
+        float: right;
+    }
+    #me{
+        position: absolute;
+        width: 80%;
+        bottom: -5vh;
+        right: -2vh;
+        transform: rotate(4deg);
+    }
+    #first-part figure img{
+        border-radius: 50px;
+    }
+    .desk-btns{
+        display: none;
+        cursor: pointer;
+    }
+    .desk-btns a{
+        text-decoration: none;
+        color: white;
+        background-color: rgb(0,0,128);
+        padding: 3%;
+        border-radius: 20px;
+    }
+    #second-part{
+        height: 155vh;
+        padding-top: 10vh;
+        display: block;
+    }
+    #personalProjects ul{
+        list-style: none;
+    }
+    #degree, #personalProjects{
+        background-color: rgb(231, 231, 231);
+        padding: 5%;
+        border-radius: 20px;
+        margin: 5% auto 5% auto;
+        height: fit-content;
+    }
+    #cvbtn{
+        max-width: 1000px;
+        margin: 5% auto 5% 0%;
+    }
+    #degree a{
+        margin: 2% auto;
+    }
+    #uniLogo{
+        width: 40%;
+    }
+    #second-part #cvbtn a{
+        text-decoration: none;
+        color: white;
+        background-color: rgb(0,0,128);
+        padding: 2%;
+        border-radius: 20px;
+        margin-left: 2%;
+    }
+    .details-arrow{
+        background-color: white;
+        display: inline-block;
+        border-radius: 50%;
+        padding: 2px 15px;
+        cursor: pointer;
+    }
+    .details-arrow:hover{
+        background-color: rgb(0,0,128);
+        color: white;
+        transition: 0.5s;
+    }
+    .second-part-details{
+        z-index: 102;
+        height: 0%;
+        width: 0;
+        position: fixed;
+        top: 5%;
+        left: 2.5%;
+        background-color: rgb(0,0,128);
+        color: transparent;
+        overflow: hidden;
+        transition: 0.5s;
+        border-radius: 50px;
+        overflow: scroll;
+    }
+
+    .second-part-details::-webkit-scrollbar {
+        display: none;
+    }    
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .second-part-details {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+
+    #personal-text li{
+        list-style: none;
+    }
+    #personal-text figure{
+        margin: 1% 0%;
+    }
+    #courseLink, .projectLink{
+        color: white;
+    }
+    #pc-junkies-screenshot{
+        width: 50%;
+    }
+    .closebtn-second-part{
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        color: rgb(0,0,128);
+        background-color: white;
+        border-radius: 50%;
+        text-decoration: none;
+        font-size: 2em;
+        display: inline-block;
+        padding: 2px 15px;
+    }
+    #third-part{
+        line-height: 40px;
+        height: 140vh;
+        position: relative;
+    }
+    #third-part figure{
+        margin: 0px;
+        padding: 0px;
+        z-index: -1;
+        max-width: 95%;
+    }
+    #third-part content{
+        position: absolute;
+        top: 15vh;
+    }
+    #third-part #aboutSelfdiv{
+        margin: 2%;
+    }
+    #third-part #aboutComdiv{
+        margin: 2%;
+        border-top: 4px solid rgb(0,0,128);
+        padding-top: 2em;
+    }
+    #forth-part h1, #forth-part p{
+        margin-left: 2%;
+    }
+    #forth-part #insta, #forth-part #facebook{
+        margin: 3% auto 3% 2%;
+    }
+
+/*Tablet screen size*/
+@media screen and (min-width:500px){
+
+}
+
+/* Desktop screen size*/
+@media screen and (min-width:800px){
+    #first-part{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 80% 20%;
+    }
+    #intro-text{
+        grid-column: 1 / 2;
+        padding-left: 5%;
+    }
+    #first-part figure{
+        grid-column: 2 / 3;
+        grid-row: 1 / 3;
+        height: 50vh;
+        align-self: center;
+        justify-self: center; 
+    }
+    #rect{
+        position: absolute;
+        top: -20vh;
+        z-index: -2;
+    }
+    #me{
+        bottom: unset;
+        z-index: -1;
+    }
+    .desk-btns{
+        display: block;
+    }
+    #desktop-nav-btns{
+        padding-left: 5%;
+    }
+    #desk-degreebtn:hover, #desk-contactbtn:hover{
+        color: rgb(0,0,128);
+        background-color: rgb(231, 231, 231);
+    }
+    #desk-aboutbtn:hover{
+        color: rgb(231, 231, 231);
+        background-color: rgb(0,0,128);
+    }
+    #desk-aboutdiv{
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        justify-self: center;
+        width: 130px;
+    }
+    #desk-aboutbtn{
+        padding: 10%;
+        background-color: white;
+        color: rgb(0,0,128);
+    }
+    #second-part{
+        padding-top: 5vh;
+        display: grid;
+        grid-template-columns: 47.5% 5% 47.5%;
+        height: 110vh;
+    }
+    #second-part #degree{
+        grid-column: 3 / 4;
+    }
+    #second-part a{
+        max-width: 400px;
+    }
+    #third-part{
+        height: 100vh;
+    }
+    #third-part figure{
+        position: absolute;
+        top: -20vh;
+        max-width: 800px;
+    }
+    #third-part content h1{
+        padding-left: 2%;
+    }
+    #third-part #aboutSelf{
+        text-align: right;
+        border-right: 4px solid rgb(0,0,128);
+        padding-right: 2%;
+    }
+    #third-part #aboutComdiv{
+        border-top: none;
+        padding-top: 0px;
+    }
+    #third-part #aboutCom{
+        border-left: 4px solid rgb(0,0,128);
+        padding-left: 2%;
+    }
+} 
