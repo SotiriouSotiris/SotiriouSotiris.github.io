@@ -1,0 +1,118 @@
+/*author: Sotiris Sotiriou*/
+
+/*body styling*/
+body{
+    background-color: white;
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+/*For any image in the body*/
+body img{
+    max-width: 100%;/*so the image does not get bigger than the parent figure element and looks bad*/
+}
+/*Mobile screen size*/
+
+/*Header area styling*/
+header{
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+}
+header figure{
+    width: 20%;
+    margin: 0px;
+}
+#facebook{
+    margin: 1% 0% auto 20%;
+}
+#facebook, #insta{
+    width: 10%;
+    padding: 0px;
+    max-width: 50px;
+}
+#insta{
+    margin: 1% 0% auto 10%;
+}
+.menubtn{
+    margin-right: 5%;
+    margin-left: auto;
+}
+#menubtnTwo{
+    position: fixed;
+    display: none;
+    top: 3%;
+    right: 0.5%;
+    z-index: 99;
+    background-color: white;
+    border-radius: 50%;
+    padding: 3px 10px;
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 14%;
+    font-size: 36px;
+}
+
+/*Footer area styling*/
+footer{
+    height: 5vh;
+    background-color: rgb(54, 54, 54);
+    color: white;
+    display: grid;
+    align-items: center;
+    padding: 3%;
+    font-weight: bold;
+    width: 93vw;
+}
+
+@media screen and (min-width:500px){
+    header figure{
+        width: 15%;
+    }
+}
+
+/*Desktop screen size*/
+@media screen and (min-width:800px){
+    /*Header area styling*/
+    header figure{
+        width: 7%;
+    }
+    #facebook{
+        margin-left: 70%;
+    }
+    #insta, #facebook{
+        width: 40px;
+    }
+    #insta{
+        margin: 1% 0% auto 5%;
+    }
+    #menubtnOne{
+        display: none;
+    }
+}
