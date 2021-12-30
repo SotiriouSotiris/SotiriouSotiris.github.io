@@ -3,7 +3,7 @@
 /*body styling*/
 body{
     background-color: white;
-    font-family: sans-serif;
+    font-family: 'Mukta', sans-serif;
     overflow-x: hidden;
 }
 /*For any image in the body*/
@@ -16,22 +16,11 @@ body img{
 header{
     display: flex;
     flex-direction: row;
-    height: 10vh;
+    height: 15%;
 }
 header figure{
-    width: 20%;
+    width: 15%;
     margin: 0px;
-}
-#facebook{
-    margin: 1% 0% auto 20%;
-}
-#facebook, #insta{
-    width: 10%;
-    padding: 0px;
-    max-width: 50px;
-}
-#insta{
-    margin: 1% 0% auto 10%;
 }
 .menubtn{
     margin-right: 5%;
@@ -88,7 +77,6 @@ footer{
     align-items: center;
     padding: 3%;
     font-weight: bold;
-    width: 93vw;
 }
 
 @media screen and (min-width:500px){
@@ -102,15 +90,6 @@ footer{
     /*Header area styling*/
     header figure{
         width: 7%;
-    }
-    #facebook{
-        margin-left: 70%;
-    }
-    #insta, #facebook{
-        width: 40px;
-    }
-    #insta{
-        margin: 1% 0% auto 5%;
     }
     #menubtnOne{
         display: none;

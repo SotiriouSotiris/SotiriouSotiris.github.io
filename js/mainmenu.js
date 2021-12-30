@@ -2,23 +2,39 @@
 
 /*An event which shows or hides the navigation buttons based if they are visible or not in the mobile mode*/
 let menuBtnTwo = document.getElementById("menubtnTwo");
-function openNav(byBtnTwo) {
+function openNav() {
     document.getElementById("mySidenav").style.width = "50%";
-    //document.getElementById("main").style.marginRight = "50%";
-    if(byBtnTwo){
-        menuBtnTwo.style.display = "none";
-    }
 }
   
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
-    //document.getElementById("main").style.marginRight= "0";
     let halfScreenHeight = window.screen.height/2;
     if (document.body.scrollTop > halfScreenHeight || document.documentElement.scrollTop > halfScreenHeight) {
         menuBtnTwo.style.display = "block";
     } 
     else {
         menuBtnTwo.style.display = "none";
+    }
+}
+
+let openMenu = false;
+function showMenu(){
+    if(!openMenu){
+        document.getElementById("desk-degreebtn").style.display = "block";
+        document.getElementById("desk-contactbtn").style.display = "block";
+        document.getElementById("desk-aboutbtn").style.display = "block";
+        document.getElementById("desk-degreebtn").style.opacity = "100%";
+        document.getElementById("desk-contactbtn").style.opacity = "100%";
+        document.getElementById("desk-aboutbtn").style.opacity = "100%";
+        openMenu = true;
+    }else{
+        document.getElementById("desk-degreebtn").style.display = "none";
+        document.getElementById("desk-contactbtn").style.display = "none";
+        document.getElementById("desk-aboutbtn").style.display = "none";
+        document.getElementById("desk-degreebtn").style.opacity = "0%";
+        document.getElementById("desk-contactbtn").style.opacity = "0%";
+        document.getElementById("desk-aboutbtn").style.opacity = "0%";
+        openMenu = false;
     }
 }
 
@@ -73,19 +89,23 @@ function backToTop(){
 
 let image=document.getElementById("rect");
 if (window.innerWidth>=800){
-    image.src="../images/svg/gold and blue rect.svg";
+    image.src="../images/desktopVersionFinal.png";
 }
 else if(window.innerWidth<800){
-    image.src="../images/svg/gold rect.svg";
+    image.src="../images/mobileVersionFinal.png";
 }
 window.addEventListener("resize",()=>{
     if (window.innerWidth>=800){
-        image.src="../images/svg/gold and blue rect.svg";
+        image.src="../images/desktopVersionFinal.png";
     }
     else if(window.innerWidth<800){
-        image.src="../images/svg/gold rect.svg";
+        image.src="../images/mobileVersionFinal.png";
     }
 });
+
+let thirdPart = document.getElementById("third-part");
+let heightOfElement = thirdPart.offsetHeight;
+thirdPart.style.height = (heightOfElement - 300);
 
 // function themeMode(){
 //     let body=document.getElementById("body");
