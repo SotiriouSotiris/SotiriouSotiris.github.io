@@ -47,7 +47,7 @@ main{
 #insta, #facebook, #github, #linkedIn{
     width: 40px;
     opacity: 100%;
-    margin: 2% 3% 2% 0%;
+    margin: 2% 3% 2% 0%; /*margin changw*/ 
 }
 #desk-btns{
     display: none;
