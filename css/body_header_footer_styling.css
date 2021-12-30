@@ -22,9 +22,12 @@ header figure{
     width: 15%;
     margin: 0px;
 }
+header #themeBtn{
+    width: 30px;
+    margin: 2% 5% 0 auto;
+}
 .menubtn{
     margin-right: 5%;
-    margin-left: auto;
 }
 #menubtnTwo{
     position: fixed;

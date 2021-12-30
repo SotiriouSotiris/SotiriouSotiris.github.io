@@ -86,20 +86,36 @@ function backToTop(){
     document.querySelector('#header').scrollIntoView({behavior: 'smooth'});    
 }
 
-
+let theme = "light";
 let image=document.getElementById("rect");
 if (window.innerWidth>=800){
-    image.src="../images/desktopVersionFinal.png";
+    if(theme=="light"){
+        image.src="../images/desktopVersionFinal.png";
+    }else{
+        image.src="../images/desktopVersionFinalDark.png";
+    }
 }
 else if(window.innerWidth<800){
-    image.src="../images/mobileVersionFinal.png";
+    if(theme=="theme"){
+        image.src="../images/mobileVersionFinal.png";
+    }else{
+        image.src="../images/mobileVersionFinalDark.png";
+    }
 }
 window.addEventListener("resize",()=>{
     if (window.innerWidth>=800){
-        image.src="../images/desktopVersionFinal.png";
+        if(theme=="light"){
+            image.src="../images/desktopVersionFinal.png";
+        }else{
+            image.src="../images/desktopVersionFinalDark.png";
+        }
     }
     else if(window.innerWidth<800){
-        image.src="../images/mobileVersionFinal.png";
+        if(theme=="theme"){
+            image.src="../images/mobileVersionFinal.png";
+        }else{
+            image.src="../images/mobileVersionFinalDark.png";
+        }
     }
 });
 
@@ -107,10 +123,94 @@ let thirdPart = document.getElementById("third-part");
 let heightOfElement = thirdPart.offsetHeight;
 thirdPart.style.height = (heightOfElement - 300);
 
-// function themeMode(){
-//     let body=document.getElementById("body");
-//     body.style.backgroundColor = "black";
-//     document.getElementById("intro-text").style.color="white";
-//     document.getElementById("degree").style.color="white";
-//     document.getElementById("personalProjects").style.color="white";
-// }
+function changeTheme(){
+    let myBody = document.getElementById("body");
+    let firstPartIntro = document.getElementById("intro-text");
+    let deskMenu = document.getElementById("desk-menu");
+    let btnDegree = document.getElementById("desk-degreebtn");
+    let btnAbout = document.getElementById("desk-aboutbtn");
+    let btnContact = document.getElementById("desk-contactbtn");
+    let githubIcon = document.getElementById("githubImage");
+    let githubIconForth = document.getElementById("githubImageForth");
+    let abilitiesTitle = document.getElementById("abilitiesPart");
+    let personalProjectsPart = document.getElementById("personalProjects");
+    let cvBtn = document.getElementById("cvBtn");
+    let degreePart = document.getElementById("degree");
+    let personalDetailsPart = document.getElementById("personal-details");
+    let degreeDetailsPart = document.getElementById("degree-details");
+    let personalDetailsArrow = document.getElementById("personalCloseArrow");
+    let degreeDetailsArrow = document.getElementById("degreeCloseArrow");
+    let thirdPartText = document.getElementById("thirdPartContents");
+    let aboutSelfText = document.getElementById("aboutSelf");
+    let aboutComText = document.getElementById("aboutCom");
+    let forthPartText = document.getElementById("forth-part");
+    let footerPart = document.getElementById("footer");
+    let backToTopBtn = document.getElementById("backToTop");
+    if(theme == "light"){
+        document.getElementById("theme-image").src = "../images/icons8-sun-48White.png";
+        document.getElementById("logo").src = "../images/logoDark.png";
+        document.getElementById("cyprusFlag").src = "../images/cyprus -pngDark.png";
+        if(window.innerWidth<800){
+            image.src = "../images/mobileVersionFinalDark.png";
+        }else{
+            image.src = "../images/desktopVersionFinalDark.png";
+        }
+        githubIcon.src = "../images/svg/githubIconWhite.svg";
+        githubIconForth.src = "../images/svg/githubIconWhite.svg";
+        myBody.style.backgroundColor = "rgb(20,20,20)";
+        firstPartIntro.style.color = "white";
+        deskMenu.style.backgroundColor = "white";
+        deskMenu.style.color = "black";
+        btnDegree.style.color = "black";
+        btnAbout.style.color = "black";
+        btnContact.style.color = "black";
+        abilitiesTitle.style.color = "white";
+        personalProjectsPart.style.color = "black";
+        cvBtn.style.backgroundColor = "black";
+        degreePart.style.color = "black";
+        personalDetailsPart.style.backgroundColor = "black";
+        degreeDetailsPart.style.backgroundColor = "black";
+        personalDetailsArrow.style.color = "black";
+        degreeDetailsArrow.style.color = "black";
+        thirdPartText.style.color = "white";
+        aboutSelfText.style.borderRight = "4px solid white"
+        aboutComText.style.borderLeft = "4px solid white"
+        forthPartText.style.color = "white";
+        footerPart.style.backgroundColor = "black";
+        backToTopBtn.style.backgroundColor = "black";
+        theme = "dark";
+    }else{
+        document.getElementById("theme-image").src = "../images/moon-6693.png";
+        document.getElementById("logo").src = "../images/logo.png";
+        document.getElementById("cyprusFlag").src = "../images/cyprus -png.png";
+        if(window.innerWidth<800){
+            image.src = "../images/mobileVersionFinal.png";
+        }else{
+            image.src = "../images/desktopVersionFinal.png";
+        }
+        githubIcon.src = "../images/svg/githubIcon.svg";
+        githubIconForth.src = "../images/svg/githubIcon.svg";
+        myBody.style.backgroundColor = "white";
+        firstPartIntro.style.color = "rgb(0,0,128)";
+        deskMenu.style.color = "white";
+        deskMenu.style.backgroundColor = "rgb(0,0,128)";
+        btnDegree.style.color = "rgb(0,0,128)";
+        btnAbout.style.color = "rgb(0,0,128)";
+        btnContact.style.color = "rgb(0,0,128)";
+        abilitiesTitle.style.color = "rgb(0,0,128)";
+        personalProjectsPart.style.color = "rgb(0,0,128)";
+        cvBtn.style.backgroundColor = "rgb(0,0,128)";
+        degreePart.style.color = "rgb(0,0,128)";
+        personalDetailsPart.style.backgroundColor = "rgb(0,0,128)";
+        degreeDetailsPart.style.backgroundColor = "rgb(0,0,128)";
+        personalDetailsArrow.style.color = "rgb(0,0,128)";
+        degreeDetailsArrow.style.color = "rgb(0,0,128)";
+        thirdPartText.style.color = "rgb(0,0,128)";
+        aboutSelfText.style.borderRight = "4px solid rgb(0,0,128)"
+        aboutComText.style.borderLeft = "4px solid rgb(0,0,128)"
+        forthPartText.style.color = "rgb(0,0,128)";
+        footerPart.style.backgroundColor = "rgb(54,54,54)";
+        backToTopBtn.style.backgroundColor = "rgb(0,0,128)";
+        theme = "light";
+    }
+}
