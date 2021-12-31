@@ -8,13 +8,6 @@ function openNav() {
   
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
-    let halfScreenHeight = window.screen.height/2;
-    if (document.body.scrollTop > halfScreenHeight || document.documentElement.scrollTop > halfScreenHeight) {
-        menuBtnTwo.style.display = "block";
-    } 
-    else {
-        menuBtnTwo.style.display = "none";
-    }
 }
 
 let openMenu = false;
@@ -74,11 +67,9 @@ let halfScreenHeight = window.screen.height/2;
 window.onscroll = function() {
     if (document.body.scrollTop > halfScreenHeight || document.documentElement.scrollTop > halfScreenHeight) {
         mybutton.style.display = "block";
-        menuBtnTwo.style.display = "block";
     } 
     else {
         mybutton.style.display = "none";
-        menuBtnTwo.style.display = "none";
     }
 };
 // When the user clicks on the button, scroll to the top of the document
@@ -88,6 +79,9 @@ function backToTop(){
 
 let theme = "light";
 let image=document.getElementById("rect");
+let aboutSelfText = document.getElementById("aboutSelf");
+let aboutComText = document.getElementById("aboutCom");
+let aboutComDiv = document.getElementById("aboutComdiv");
 if (window.innerWidth>=800){
     if(theme=="light"){
         image.src="../images/desktopVersionFinal.png";
@@ -96,7 +90,7 @@ if (window.innerWidth>=800){
     }
 }
 else if(window.innerWidth<800){
-    if(theme=="theme"){
+    if(theme=="light"){
         image.src="../images/mobileVersionFinal.png";
     }else{
         image.src="../images/mobileVersionFinalDark.png";
@@ -106,15 +100,27 @@ window.addEventListener("resize",()=>{
     if (window.innerWidth>=800){
         if(theme=="light"){
             image.src="../images/desktopVersionFinal.png";
+            aboutSelfText.style.borderRight = "4px solid rgb(0,0,128)";
+            aboutComText.style.borderLeft = "4px solid rgb(0,0,128)";
+            aboutComDiv.style.borderTop = "none";
         }else{
             image.src="../images/desktopVersionFinalDark.png";
+            aboutSelfText.style.borderRight = "4px solid white";
+            aboutComText.style.borderLeft = "4px solid white";
+            aboutComDiv.style.borderTop = "none";
         }
     }
     else if(window.innerWidth<800){
-        if(theme=="theme"){
+        if(theme=="light"){
             image.src="../images/mobileVersionFinal.png";
+            aboutSelfText.style.borderRight = "none";
+            aboutComText.style.borderLeft = "none";
+            aboutComDiv.style.borderTop = "4px solid rgb(0,0,128)";
         }else{
             image.src="../images/mobileVersionFinalDark.png";
+            aboutSelfText.style.borderRight = "none";
+            aboutComText.style.borderLeft = "none";
+            aboutComDiv.style.borderTop = "4px solid white";
         }
     }
 });
@@ -123,9 +129,19 @@ let thirdPart = document.getElementById("third-part");
 let heightOfElement = thirdPart.offsetHeight;
 thirdPart.style.height = (heightOfElement - 300);
 
+const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+toggleSwitch.addEventListener('change', function(){
+    if(this.checked){
+        changeTheme();
+    }else{
+        changeTheme();
+    }
+});
+
 function changeTheme(){
     let myBody = document.getElementById("body");
     let firstPartIntro = document.getElementById("intro-text");
+    let menuBtn = document.getElementById("menubtnOne");
     let deskMenu = document.getElementById("desk-menu");
     let btnDegree = document.getElementById("desk-degreebtn");
     let btnAbout = document.getElementById("desk-aboutbtn");
@@ -143,11 +159,14 @@ function changeTheme(){
     let thirdPartText = document.getElementById("thirdPartContents");
     let aboutSelfText = document.getElementById("aboutSelf");
     let aboutComText = document.getElementById("aboutCom");
+    let aboutComDiv = document.getElementById("aboutComdiv");
     let forthPartText = document.getElementById("forth-part");
     let footerPart = document.getElementById("footer");
     let backToTopBtn = document.getElementById("backToTop");
     if(theme == "light"){
-        document.getElementById("theme-image").src = "../images/icons8-sun-48White.png";
+        //document.getElementById("theme-image").src = "../images/icons8-sun-48White.png";
+        document.getElementById("sun").style.opacity = "100%";
+        document.getElementById("moon").style.opacity = "0%";
         document.getElementById("logo").src = "../images/logoDark.png";
         document.getElementById("cyprusFlag").src = "../images/cyprus -pngDark.png";
         if(window.innerWidth<800){
@@ -155,6 +174,7 @@ function changeTheme(){
         }else{
             image.src = "../images/desktopVersionFinalDark.png";
         }
+        menuBtn.style.color = "white";
         githubIcon.src = "../images/svg/githubIconWhite.svg";
         githubIconForth.src = "../images/svg/githubIconWhite.svg";
         myBody.style.backgroundColor = "rgb(20,20,20)";
@@ -173,14 +193,20 @@ function changeTheme(){
         personalDetailsArrow.style.color = "black";
         degreeDetailsArrow.style.color = "black";
         thirdPartText.style.color = "white";
-        aboutSelfText.style.borderRight = "4px solid white"
-        aboutComText.style.borderLeft = "4px solid white"
+        if(window.innerWidth>=800){
+            aboutSelfText.style.borderRight = "4px solid white";
+            aboutComText.style.borderLeft = "4px solid white";
+        }else{
+            aboutComDiv.style.borderTop = "4px solid white";
+        }
         forthPartText.style.color = "white";
         footerPart.style.backgroundColor = "black";
         backToTopBtn.style.backgroundColor = "black";
         theme = "dark";
     }else{
-        document.getElementById("theme-image").src = "../images/moon-6693.png";
+        //document.getElementById("theme-image").src = "../images/moon-6693.png";
+        document.getElementById("sun").style.opacity = "0%";
+        document.getElementById("moon").style.opacity = "100%";
         document.getElementById("logo").src = "../images/logo.png";
         document.getElementById("cyprusFlag").src = "../images/cyprus -png.png";
         if(window.innerWidth<800){
@@ -188,6 +214,7 @@ function changeTheme(){
         }else{
             image.src = "../images/desktopVersionFinal.png";
         }
+        menuBtn.style.color = "black";
         githubIcon.src = "../images/svg/githubIcon.svg";
         githubIconForth.src = "../images/svg/githubIcon.svg";
         myBody.style.backgroundColor = "white";
@@ -206,8 +233,12 @@ function changeTheme(){
         personalDetailsArrow.style.color = "rgb(0,0,128)";
         degreeDetailsArrow.style.color = "rgb(0,0,128)";
         thirdPartText.style.color = "rgb(0,0,128)";
-        aboutSelfText.style.borderRight = "4px solid rgb(0,0,128)"
-        aboutComText.style.borderLeft = "4px solid rgb(0,0,128)"
+        if(window.innerWidth>=800){
+            aboutSelfText.style.borderRight = "4px solid rgb(0,0,128)";
+            aboutComText.style.borderLeft = "4px solid rgb(0,0,128)";
+        }else{
+            aboutComDiv.style.borderTop = "4px solid rgb(0,0,128)";
+        }
         forthPartText.style.color = "rgb(0,0,128)";
         footerPart.style.backgroundColor = "rgb(54,54,54)";
         backToTopBtn.style.backgroundColor = "rgb(0,0,128)";

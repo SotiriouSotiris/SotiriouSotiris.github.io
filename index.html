@@ -19,8 +19,14 @@
        <figure>
            <img id="logo" src="../images/logo.png">
        </figure>
-       <div id="themeBtn"> <a onclick="changeTheme()"><img id="theme-image" src="../images/moon-6693.png"></a> </div>
-        <!--<a onclick="themeMode()">Dark Mode</a>    In case I want to create a Dark mode(There is a function in mainmenu.js commented out for this)-->
+       <img id="sun" src="../images/icons8-sun-48White.png">
+       <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox"/>
+                <div class="slider round"></div>
+            </label>
+        </div>
+        <img id="moon" src="../images/moon-6693.png">
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a id="" onclick="document.querySelector('#abilitiesPart').scrollIntoView({behavior: 'smooth'});closeNav()" >Abilities</a>
