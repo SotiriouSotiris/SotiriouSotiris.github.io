@@ -120,6 +120,9 @@ main{
 #detailsDiv{
     padding: 0% 3% 0% 3%;
 }
+.second-part-details h1{
+    width: 70%;
+}
 #personal-text li{
     list-style: none;
 }
