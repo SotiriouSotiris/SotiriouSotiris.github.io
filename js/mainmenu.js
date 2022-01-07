@@ -1,6 +1,7 @@
 /*author: Sotiris Sotiriou*/
 
 /*An event which shows or hides the navigation buttons based if they are visible or not in the mobile mode*/
+
 let menuBtnTwo = document.getElementById("menubtnTwo");
 function openNav() {
     document.getElementById("mySidenav").style.width = "50%";
@@ -13,6 +14,7 @@ function closeNav() {
 let openMenu = false;
 function showMenu(){
     if(!openMenu){
+        document.getElementById("menu-arrow").innerHTML = "&#10095;";
         document.getElementById("desk-degreebtn").style.display = "block";
         document.getElementById("desk-contactbtn").style.display = "block";
         document.getElementById("desk-aboutbtn").style.display = "block";
@@ -29,6 +31,14 @@ function showMenu(){
         document.getElementById("desk-aboutbtn").style.opacity = "0%";
         openMenu = false;
     }
+}
+function moveArrow(){
+    if(!openMenu)
+        document.getElementById("menu-arrow").innerHTML = "&#xA0;&#xA0;&#xA0;&#10095;";
+}
+function resetArrow(){
+    if(!openMenu)
+        document.getElementById("menu-arrow").innerHTML = "&#10095;";
 }
 
 function openDetails(typeOfDetails){

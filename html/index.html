@@ -49,7 +49,7 @@
                     <p id="linkedIn"><a href="https://www.linkedin.com/in/sotiris-sotiriou-741327222/" target="_blank" rel="noopener noreferrer"><img id="linkedInImage" src="../images/svg/linkedin logo icon.svg" alt=""></a></p>
                 </div>
                 <div id="desk-btns">
-                    <a id="desk-menu" onclick="showMenu()"> Menu <span id="menu-arrow">&#10095;</span> </a>
+                    <a id="desk-menu" onmouseover="moveArrow()" onmouseout="resetArrow()" onclick="showMenu()"> Menu <span id="menu-arrow"> &#10095; </span> </a>
                     <a class="deskToOpen" id="desk-degreebtn" onclick="document.querySelector('#abilitiesPart').scrollIntoView({behavior: 'smooth'});" >Abilities</a>
                     <a class="deskToOpen" id="desk-aboutbtn" onclick="document.querySelector('#third-part').scrollIntoView({behavior: 'smooth'});">About Me</a>
                     <a class="deskToOpen" id="desk-contactbtn" onclick="document.querySelector('#forth-part').scrollIntoView({behavior: 'smooth'});">Contact</a>
