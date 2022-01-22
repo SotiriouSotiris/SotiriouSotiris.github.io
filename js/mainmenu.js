@@ -1,7 +1,5 @@
 /*author: Sotiris Sotiriou*/
 
-/*An event which shows or hides the navigation buttons based if they are visible or not in the mobile mode*/
-
 let menuBtnTwo = document.getElementById("menubtnTwo");
 function openNav() {
     document.getElementById("mySidenav").style.width = "50%";
