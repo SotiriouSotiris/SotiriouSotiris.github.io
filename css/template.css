@@ -30,6 +30,16 @@ main{
     flex-direction: column;
     padding: 0% 3% 0% 3%;
 }
+#watermark{
+    position: absolute;
+    width: max-content;
+    overflow-x: hidden;
+    top: -5%;
+    font-size: 5em;
+    opacity: 20%;
+    z-index: -99;
+    padding-left: 5%;
+}
 #first-part figure{
     margin: 0px;
     padding: 0px;
@@ -192,6 +202,14 @@ main{
     }
     #intro-text h1{
         font-size: 150%;
+    }
+    #watermark{
+        top: -7%;
+        font-size: 7em;
+        padding-left: 1%;
+    }
+    #spaces, #linebrake{
+        display: none;
     }
     #insta, #facebook, #github, #linkedIn{
         opacity: 50%;
