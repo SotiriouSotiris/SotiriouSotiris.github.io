@@ -5,6 +5,9 @@ body{
     background-color: white;
     font-family: 'Mukta', sans-serif;
     overflow-x: hidden;
+    max-width: 2000px;
+    margin: auto;
+    margin-top: 10px;
 }
 /*For any image in the body*/
 body img{
@@ -150,4 +153,9 @@ footer{
     #menubtnOne{
         display: none;
     }
+}
+@media screen and (min-width:1500px){
+    /* body{
+        
+    } */
 }
