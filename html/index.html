@@ -35,7 +35,7 @@
       </div>
       <span id="menubtnOne" class="menubtn" style="font-size:30px;cursor:pointer" onclick="openNav(false)">&#9776;</span>
     </header>
-    <!-- <h2 id="watermark">Σωτήρης <br id="linebrake"> <span id="spaces"> &#xA0;&#xA0;&#xA0; </span> Σωτηρίου</h2> -->
+    <h2 id="watermark">Σωτήρης <br id="linebrake"> &#xA0;&#xA0;&#xA0;Σωτηρίου</h2>
     <main>
         <button onclick="backToTop()" id="backToTop" ><svg id="toTopSVG" class="svg-inline--fa fa-angle-up fa-w-10 fa-2x" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"></path></svg></button>
         <div id="first-part">
@@ -49,7 +49,8 @@
                     <p id="linkedIn"><a href="https://www.linkedin.com/in/sotiris-sotiriou-741327222/" target="_blank" rel="noopener noreferrer"><img id="linkedInImage" src="../images/svg/linkedin logo icon.svg" alt=""></a></p>
                 </div>
                 <div id="desk-btns">
-                    <a id="desk-menu" onmouseover="moveArrow()" onmouseout="resetArrow()" onclick="showMenu()"> Menu <span id="menu-arrow"> &#10095; </span> </a>
+                    
+                    <a id="desk-menu"  onclick="showMenu()"> <span id="menu-arrow"> &#10095; </span> </a> 
                     <a class="deskToOpen" id="desk-degreebtn" onclick="document.querySelector('#abilitiesPart').scrollIntoView({behavior: 'smooth'});" >Abilities</a>
                     <a class="deskToOpen" id="desk-aboutbtn" onclick="document.querySelector('#cyprusFlag').scrollIntoView({behavior: 'smooth'});">About Me</a>
                     <a class="deskToOpen" id="desk-contactbtn" onclick="document.querySelector('#forth-part').scrollIntoView({behavior: 'smooth'});">Contact</a>
@@ -88,10 +89,11 @@
                 <section id="personal-text">
                     <h1>Personal Projects</h1>
                     <ul>
-                        <li>
-                            <a class="projectLink" href="../pc junkies/html/index.html" target="_blank" rel="noopener noreferrer">PC Junkies webpage</a> <br>
-                            <p>A webpage developed for advertisement purposes of a small team that builds computers.</p>
-                            <figure><img id="pc-junkies-screenshot" src="../images/pc-junkies-screenshot.png"></figure>
+                        <li onmouseover="displayImage('pc-junkies-screenshot')" onmouseout="hideImage('pc-junkies-screenshot')"  class="individualProjects">
+                            <p> <a class="projectLink" href="../pc junkies/html/index.html" target="_blank" rel="noopener noreferrer">
+                                PC Junkies webpage</a> <br>
+                            A webpage developed for advertisement purposes of a small team that builds computers.</p>
+                            <figure><a href="../pc junkies/html/index.html" target="_blank" rel="noopener noreferrer"> <img id="pc-junkies-screenshot" src="../images/pc-junkies-screenshot.png"> </a></figure>
                         </li>
                     </ul>
                 </section>
@@ -100,41 +102,53 @@
                 <a href="javascript:void(0)" class="closebtn-second-part" id="degreeCloseArrow" onclick="closeDetails('degree')">&times;</a>
                 <section id="degree-text">
                     <h1>Degree</h1>
-                    <h2>First year, Mark: 79%</h2>
-                    <p>Modules</p>
-                    <ul style="list-style: none;">
-                        <li> Introduction to Software Engineering</li>
-                        <li> Foundations of Computer Science </li>
-                        <li> Java Programming </li>
-                        <li> Machines and Intelligence </li>
-                        <li> Devices and Networks </li>
-                        <li> Web and Internet Technology </li>
-                        <li> Introduction to algorithms and datastructures </li>
-                    </ul>
-                    <p>Key Assignments</p>
-                    <ul>
-                        <li>Personal Portfolio: HTML/CSS/Javascript website as personal portfolio.</li>
-                        <li>Mentee/Mentor Matching system: Ruby web application for university students to sign up as mentee or mentor and match based on preferences for mentors to help mentees.</li>
-                        <li>A Portuguese Wine browser: A java application to interact and search wines from a list.</li>
-                        <li>The Rambler’s Problem: Finding the best path from any point, for a human to walk on a mountain using AI search algorithms.</li>
-                    </ul>
-                    <h2>Second year</h2>
-                    <p>Modules</p>
-                    <ul style="list-style: none;">
-                        <li> Data Driven Computing </li>
-                        <li> Systems Desing and Security </li>
-                        <li> Functional Programming </li>
-                        <li> Automata, Computation and Complexity </li>
-                        <li> Logic in Computer Science </li>
-                        <li> Robotics </li>
-                        <li> Software Hut </li>
-                    </ul>
-                    <p>Key Assignments</p>
-                    <ul>
-                        <li>Chess pieces identifier: Python program which trains it self using given examples of chess piece images and after training is able to identify individual chess pieces, with ver high scores of correctness.</li>
-                        <li>Property short rental system: Java, Java Swing application where hosts can register their properties for the guests to rent them.</li>
-                        <li>Solitaire autoplay program: Haskell program which initialise a random initial solitaire board and tries to solve it by making to appropriate moves.</li>
-                    </ul>
+                    <h2 style="margin-bottom: 0%;">First year, Mark: 79%</h2>
+                    <section class="individualYears">
+                        <div class="modules">
+                            <p>Modules</p>
+                            <ul style="list-style: none;">
+                                <li> Introduction to Software Engineering</li>
+                                <li> Foundations of Computer Science </li>
+                                <li> Java Programming </li>
+                                <li> Machines and Intelligence </li>
+                                <li> Devices and Networks </li>
+                                <li> Web and Internet Technology </li>
+                                <li> Introduction to algorithms and datastructures </li>
+                            </ul>
+                        </div>
+                        <div class="assignments">
+                            <p>Key Assignments</p>
+                            <ul style="list-style: none;">
+                                <li><b>Personal Portfolio:</b> HTML/CSS/Javascript website as personal portfolio.</li>
+                                <li><b>Mentee/Mentor Matching system:</b> Ruby web application for university students to sign up as mentee or mentor and match based on preferences for mentors to help mentees.</li>
+                                <li><b>A Portuguese Wine browser:</b> A java application to interact and search wines from a list.</li>
+                                <li><b>The Rambler’s Problem:</b> Finding the best path from any point, for a human to walk on a mountain using AI search algorithms.</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <h2 style="margin-bottom: 0%;">Second year</h2>
+                    <section class="individualYears">
+                        <div class="modules">
+                            <p>Modules</p>
+                            <ul style="list-style: none;">
+                                <li> Data Driven Computing </li>
+                                <li> Systems Desing and Security </li>
+                                <li> Functional Programming </li>
+                                <li> Automata, Computation and Complexity </li>
+                                <li> Logic in Computer Science </li>
+                                <li> Robotics </li>
+                                <li> Software Hut </li>
+                            </ul>
+                        </div>
+                        <div class="assignments">
+                            <p>Key Assignments</p>
+                            <ul style="list-style: none;">
+                                <li><b>Chess pieces identifier:</b> Python program which trains it self using given examples of chess piece images and after training is able to identify individual chess pieces, with ver high scores of correctness.</li>
+                                <li><b>Property short rental system:</b> Java, Java Swing application where hosts can register their properties for the guests to rent them.</li>
+                                <li><b>Solitaire autoplay program:</b> Haskell program which initialise a random initial solitaire board and tries to solve it by making to appropriate moves.</li>
+                            </ul>
+                        </div>
+                    </section>
                     <p>More details about my degree: <a id="courseLink" href="https://www.sheffield.ac.uk/undergraduate/courses/2021/computer-science-bsc" target="_blank" rel="noopener noreferrer">University of Sheffield: BSc Computer Science</a></p>
                 </section>
             </div> 
@@ -192,7 +206,7 @@
         </div>
     </main>
     <footer id="footer">
-        <p id="copyright">&copy; 2021 Sotiris Sotiriou</p>
+        <p id="copyright">&copy; 2022 Sotiris Sotiriou</p>
     </footer>
 
     <script src="../js/mainmenu.js"></script>
