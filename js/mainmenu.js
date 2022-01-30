@@ -30,14 +30,6 @@ function showMenu(){
         openMenu = false;
     }
 }
-function moveArrow(){
-    if(!openMenu)
-        document.getElementById("menu-arrow").innerHTML = "&#xA0;&#xA0;&#xA0;&#10095;";
-}
-function resetArrow(){
-    if(!openMenu)
-        document.getElementById("menu-arrow").innerHTML = "&#10095;";
-}
 
 function openDetails(typeOfDetails){
     if(typeOfDetails=='degree'){
@@ -66,6 +58,15 @@ function closeDetails(typeOfDetails){
         document.getElementById("personal-details").style.color = "transparent";
         document.getElementById("personal-text").style.margin = "0%";
     }
+}
+
+function displayImage(imageId){
+    document.getElementById(imageId).style.opacity = "100%";
+    document.getElementById(imageId).style.borderRadius = "20px";
+}
+function hideImage(imageId){
+    document.getElementById(imageId).style.opacity = "70%";
+    document.getElementById(imageId).style.borderRadius = "500px";
 }
 
 //Get the button
@@ -149,6 +150,7 @@ toggleSwitch.addEventListener('change', function(){
 function changeTheme(){
     let myBody = document.getElementById("body");
     let firstPartIntro = document.getElementById("intro-text");
+    let watermark = document.getElementById("watermark");
     let menuBtn = document.getElementById("menubtnOne");
     let deskMenu = document.getElementById("desk-menu");
     let btnDegree = document.getElementById("desk-degreebtn");
@@ -187,6 +189,8 @@ function changeTheme(){
         githubIconForth.src = "../images/svg/githubIconWhite.svg";
         myBody.style.backgroundColor = "rgb(20,20,20)";
         firstPartIntro.style.color = "white";
+        watermark.style.color = "black";
+        watermark.style.opacity = "100%";
         deskMenu.style.backgroundColor = "white";
         deskMenu.style.color = "black";
         btnDegree.style.color = "black";
@@ -227,6 +231,8 @@ function changeTheme(){
         githubIconForth.src = "../images/svg/githubIcon.svg";
         myBody.style.backgroundColor = "white";
         firstPartIntro.style.color = "rgb(0,0,128)";
+        watermark.style.color = "rgb(0,0,128)";
+        watermark.style.opacity = "20%";
         deskMenu.style.color = "white";
         deskMenu.style.backgroundColor = "rgb(0,0,128)";
         btnDegree.style.color = "rgb(0,0,128)";
