@@ -44,6 +44,12 @@ function openDetails(typeOfDetails){
         document.getElementById("personal-details").style.color = "rgb(255,255,255)";
         document.getElementById("personal-text").style.margin = "2% 3%";
     }
+    else if(typeOfDetails=='experience'){
+        document.getElementById("experience-details").style.width = "95%";
+        document.getElementById("experience-details").style.height = "90%";
+        document.getElementById("experience-details").style.color = "rgb(255,255,255)";
+        document.getElementById("experience-text").style.margin = "2% 3%";
+    }
 }
 function closeDetails(typeOfDetails){
     if(typeOfDetails=='degree'){
@@ -57,6 +63,12 @@ function closeDetails(typeOfDetails){
         document.getElementById("personal-details").style.height = "0%";
         document.getElementById("personal-details").style.color = "transparent";
         document.getElementById("personal-text").style.margin = "0%";
+    }
+    else if(typeOfDetails=='experience'){
+        document.getElementById("experience-details").style.width = "0";
+        document.getElementById("experience-details").style.height = "0%";
+        document.getElementById("experience-details").style.color = "transparent";
+        document.getElementById("experience-text").style.margin = "0%";
     }
 }
 
@@ -152,18 +164,21 @@ function changeTheme(){
     let firstPartIntro = document.getElementById("intro-text");
     let watermark = document.getElementById("watermark");
     let menuBtn = document.getElementById("menubtnOne");
-    let deskMenu = document.getElementById("desk-menu");
-    let btnDegree = document.getElementById("desk-degreebtn");
-    let btnAbout = document.getElementById("desk-aboutbtn");
-    let btnContact = document.getElementById("desk-contactbtn");
+    // let deskMenu = document.getElementById("desk-menu");
+    // let btnDegree = document.getElementById("desk-degreebtn");
+    // let btnAbout = document.getElementById("desk-aboutbtn");
+    // let btnContact = document.getElementById("desk-contactbtn");
     let githubIcon = document.getElementById("githubImage");
     let githubIconForth = document.getElementById("githubImageForth");
     let abilitiesTitle = document.getElementById("abilitiesPart");
     let personalProjectsPart = document.getElementById("personalProjects");
+    let experiencePart = document.getElementById("experience");
     let cvBtn = document.getElementById("cvBtn");
     let degreePart = document.getElementById("degree");
+    let experienceDetailsPart = document.getElementById("experience-details");
     let personalDetailsPart = document.getElementById("personal-details");
     let degreeDetailsPart = document.getElementById("degree-details");
+    let experienceDetailsArrow = document.getElementById("experienceCloseArrow");
     let personalDetailsArrow = document.getElementById("personalCloseArrow");
     let degreeDetailsArrow = document.getElementById("degreeCloseArrow");
     let thirdPartText = document.getElementById("thirdPartContents");
@@ -184,6 +199,9 @@ function changeTheme(){
         }else{
             image.src = "../images/desktopVersionFinalDark.png";
         }
+        document.getElementById("firstHeaderMenu").style.color = "white";
+        document.getElementById("secondHeaderMenu").style.color = "white";
+        document.getElementById("thirdHeaderMenu").style.color = "white";
         menuBtn.style.color = "white";
         githubIcon.src = "../images/svg/githubIconWhite.svg";
         githubIconForth.src = "../images/svg/githubIconWhite.svg";
@@ -191,17 +209,20 @@ function changeTheme(){
         firstPartIntro.style.color = "white";
         watermark.style.color = "black";
         watermark.style.opacity = "100%";
-        deskMenu.style.backgroundColor = "white";
-        deskMenu.style.color = "black";
-        btnDegree.style.color = "black";
-        btnAbout.style.color = "black";
-        btnContact.style.color = "black";
+        // deskMenu.style.backgroundColor = "white";
+        // deskMenu.style.color = "black";
+        // btnDegree.style.color = "black";
+        // btnAbout.style.color = "black";
+        // btnContact.style.color = "black";
         abilitiesTitle.style.color = "white";
         personalProjectsPart.style.color = "black";
+        experiencePart.style.color = "black";
         cvBtn.style.backgroundColor = "black";
         degreePart.style.color = "black";
+        experienceDetailsPart.style.backgroundColor = "black";
         personalDetailsPart.style.backgroundColor = "black";
         degreeDetailsPart.style.backgroundColor = "black";
+        experienceDetailsArrow.style.color = "black";
         personalDetailsArrow.style.color = "black";
         degreeDetailsArrow.style.color = "black";
         thirdPartText.style.color = "white";
@@ -226,6 +247,9 @@ function changeTheme(){
         }else{
             image.src = "../images/desktopVersionFinal.png";
         }
+        document.getElementById("firstHeaderMenu").style.color = "rgb(0,0,128";
+        document.getElementById("secondHeaderMenu").style.color = "rgb(0,0,128";
+        document.getElementById("thirdHeaderMenu").style.color = "rgb(0,0,128";
         menuBtn.style.color = "black";
         githubIcon.src = "../images/svg/githubIcon.svg";
         githubIconForth.src = "../images/svg/githubIcon.svg";
@@ -233,17 +257,20 @@ function changeTheme(){
         firstPartIntro.style.color = "rgb(0,0,128)";
         watermark.style.color = "rgb(0,0,128)";
         watermark.style.opacity = "20%";
-        deskMenu.style.color = "white";
-        deskMenu.style.backgroundColor = "rgb(0,0,128)";
-        btnDegree.style.color = "rgb(0,0,128)";
-        btnAbout.style.color = "rgb(0,0,128)";
-        btnContact.style.color = "rgb(0,0,128)";
+        // deskMenu.style.color = "white";
+        // deskMenu.style.backgroundColor = "rgb(0,0,128)";
+        // btnDegree.style.color = "rgb(0,0,128)";
+        // btnAbout.style.color = "rgb(0,0,128)";
+        // btnContact.style.color = "rgb(0,0,128)";
         abilitiesTitle.style.color = "rgb(0,0,128)";
+        experiencePart.style.color = "rgb(0,0,128)";
         personalProjectsPart.style.color = "rgb(0,0,128)";
         cvBtn.style.backgroundColor = "rgb(0,0,128)";
         degreePart.style.color = "rgb(0,0,128)";
+        experienceDetailsPart.style.backgroundColor = "rgb(0,0,128)";
         personalDetailsPart.style.backgroundColor = "rgb(0,0,128)";
         degreeDetailsPart.style.backgroundColor = "rgb(0,0,128)";
+        experienceDetailsArrow.style.color = "rgb(0,0,128)";
         personalDetailsArrow.style.color = "rgb(0,0,128)";
         degreeDetailsArrow.style.color = "rgb(0,0,128)";
         thirdPartText.style.color = "rgb(0,0,128)";

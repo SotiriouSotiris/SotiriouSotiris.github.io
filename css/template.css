@@ -61,23 +61,30 @@ main{
     opacity: 100%;
     margin: 2% 3% 2% 0%;
 }
-#desk-btns{
+/* #desk-btns{
     display: none;
     cursor: pointer;
-}
+} */
 #second-part{
     display: flex;
     flex-direction: column;
 }
-#personalProjects ul{
+#second-part li{
     list-style: none;
 }
-#degree, #personalProjects{
+#degree, #personalProjects, #experience{
     background-color: rgb(231, 231, 231);
     padding: 5%;
     border-radius: 20px;
     margin: 5% auto 5% auto;
     height: fit-content;
+}
+#experience-text li{
+    width: max-content;
+}
+#experience-text li:hover{
+    border-bottom: 3px solid #EEC615;
+    transition: 0.2s;
 }
 .scrollAnim{
     opacity: 100%;
@@ -139,17 +146,18 @@ main{
 .second-part-details h1{
     width: 70%;
 }
-#personal-text li{
-    list-style: none;
-}
 #personal-text figure{
     margin: 1% 0%;
 }
 #courseLink, .projectLink{
     color: white;
+    text-decoration: none;
 }
-#pc-junkies-screenshot{
-    width: 60%;
+#courseLink:hover, .projectLink:hover{
+    border-bottom: 3px solid #EEC615;
+    transition: 0.2s;
+}
+#pc-junkies-screenshot, #armyPlanner-screenshot{
     opacity: 70%;
     transition: 0.5s;
     border-radius: 500px;
@@ -222,7 +230,7 @@ main{
     #insta:hover, #facebook:hover, #github:hover, #linkedIn:hover{
         opacity: 100%;
     }
-    #desk-btns{
+    /* #desk-btns{
         display: flex;
         flex-direction: row;
     }
@@ -250,12 +258,16 @@ main{
     .deskToOpen:hover{
         color: rgb(238, 198, 21);
         transition: 0.5s;
+    } */
+    #personal-text li p, #personal-text li figure{
+        width: 50%;
+        margin: 0.5%;
     }
     #detailsDiv{
         display: flex;
         flex-direction: row;
     }
-    #personalProjects, #degree{
+    #doubleSection, #degree{
         width: 45%;
         margin: 1.5%;
     }
@@ -270,11 +282,11 @@ main{
     .modules, .assignments{
         width: 50%;
     }
-    .assignments{
+    /* .assignments{
         border-left: 4px solid rgb(231, 231, 231);
         border-radius: 100px;
         padding-left: 3%;
-    }
+    } */
     #third-part figure{
         top: 20vh;
     }

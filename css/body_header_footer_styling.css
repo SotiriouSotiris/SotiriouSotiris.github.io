@@ -25,6 +25,9 @@ header figure{
     width: 15%;
     margin: 0px;
 }
+.headerMenu{
+    display: none;
+}
 #moon{
     width: 30px;
     height: 30px;
@@ -126,6 +129,10 @@ input:checked + .slider:before {
     right: 14%;
     font-size: 36px;
 }
+#changeModeSideNav{
+    display: flex;
+    flex-direction: row;
+}
 
 /*Footer area styling*/
 footer{
@@ -149,6 +156,25 @@ footer{
     /*Header area styling*/
     header figure{
         width: 7%;
+    }
+    .headerMenu{
+        display: block;
+        font-size: 1.5em;
+        margin: 1% 2% 0% 2%;
+        color: rgb(0,0,128);
+        border-bottom: none;
+        height: min-content;
+        cursor: pointer;
+    }
+    .headerMenu:hover{
+        border-bottom: 3px solid #EEC615;
+        transition: 0.2s;
+    }
+    #firstHeaderMenu{
+        margin-left: auto;
+    }
+    #sun{
+        margin-left: 2%;
     }
     #menubtnOne{
         display: none;

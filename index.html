@@ -19,6 +19,9 @@
        <figure>
            <img id="logo" src="../images/logo.png">
        </figure>
+       <a class="headerMenu" id="firstHeaderMenu" onclick="document.querySelector('#abilitiesPart').scrollIntoView({behavior: 'smooth'});" >Abilities</a>
+       <a class="headerMenu" id="secondHeaderMenu" onclick="document.querySelector('#thirdPartContents').scrollIntoView({behavior: 'smooth'});">About Me</a>
+       <a class="headerMenu" id="thirdHeaderMenu" onclick="document.querySelector('#forth-part').scrollIntoView({behavior: 'smooth'});">Contact</a>
        <img id="sun" src="../images/icons8-sun-48White.png">
        <div class="theme-switch-wrapper">
             <label class="theme-switch" for="checkbox">
@@ -30,9 +33,19 @@
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a id="" onclick="document.querySelector('#abilitiesPart').scrollIntoView({behavior: 'smooth'});closeNav()" >Abilities</a>
-            <a id="" onclick="document.querySelector('#cyprusFlag').scrollIntoView({behavior: 'smooth'});closeNav()">About Me</a>
+            <a id="" onclick="document.querySelector('#thirdPartContents').scrollIntoView({behavior: 'smooth'});closeNav()">About Me</a>
             <a id="" onclick="document.querySelector('#forth-part').scrollIntoView({behavior: 'smooth'});closeNav()">Contact</a>
-      </div>
+            <!-- <div id="changeModeSideNav">
+                <img id="sun" src="../images/icons8-sun-48White.png">
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox"/>
+                        <div class="slider round"></div>
+                    </label>
+                </div>
+                <img id="moon" src="../images/moon-6693.png">
+            </div> -->
+        </div>
       <span id="menubtnOne" class="menubtn" style="font-size:30px;cursor:pointer" onclick="openNav(false)">&#9776;</span>
     </header>
     <h2 id="watermark">Σωτήρης <br id="linebrake"> &#xA0;&#xA0;&#xA0;Σωτηρίου</h2>
@@ -48,13 +61,14 @@
                     <p id="github" class="socialIcons"><a href="https://github.com/SotirisSotiriou09" target="_blank" rel="noopener noreferrer"><img id="githubImage" src="../images/svg/githubIcon.svg"></a></p>
                     <p id="linkedIn" class="socialIcons"><a href="https://www.linkedin.com/in/sotiris-sotiriou-741327222/" target="_blank" rel="noopener noreferrer"><img id="linkedInImage" src="../images/svg/linkedin logo icon.svg" alt=""></a></p>
                 </div>
-                <div id="desk-btns">
+                <!-- The code below is for menu buttons, I have move the buttons to the header but left these here in case I want them back -->
+                <!-- <div id="desk-btns">
                     
                     <a id="desk-menu"  onclick="showMenu()"> <span id="menu-arrow"> &#10095; </span> </a> 
                     <a class="deskToOpen" id="desk-degreebtn" onclick="document.querySelector('#abilitiesPart').scrollIntoView({behavior: 'smooth'});" >Abilities</a>
-                    <a class="deskToOpen" id="desk-aboutbtn" onclick="document.querySelector('#cyprusFlag').scrollIntoView({behavior: 'smooth'});">About Me</a>
+                    <a class="deskToOpen" id="desk-aboutbtn" onclick="document.querySelector('#thirdPartContents').scrollIntoView({behavior: 'smooth'});">About Me</a>
                     <a class="deskToOpen" id="desk-contactbtn" onclick="document.querySelector('#forth-part').scrollIntoView({behavior: 'smooth'});">Contact</a>
-                </div>
+                </div> -->
             </div>
             <figure>
                 <img id="rect" src="../images/mobileVersionFinal.png">
@@ -66,15 +80,25 @@
                 <h1 id="abilitiesPart" style="margin: 0% 0% 0% 2%; font-size: 3em;">Abilities</h1>
             </div>
             <div id="detailsDiv">
-                <div id="personalProjects" class="scrollAnim">
-                    <h1>Personal Projects <a class="details-arrow" onclick="openDetails('projects')"> &#62; </a></h1>
-                    <p>PC Junkies webpage</p>
-                    <p>Personal portfolio website</p>
-                    <div id="cvbtn">
-                        <a id="cvBtn" href="../CV.pdf" target="_blank" rel="noopener noreferrer">&#8681; CV</a>
+                <div id="doubleSection">
+                    <div style="margin-top: 0;" id="experience" class="scrollAnim">
+                        <h1>Work experience <a class="details-arrow" onclick="openDetails('experience')"> &#62; </a></h1>
+                        <p>Web Development, WordPress</p>
+                        <ul>
+                            <li>Study Netherlands, designed and developed their webisite</li>
+                        </ul>
+                    </div>
+                    <div id="personalProjects" class="scrollAnim">
+                        <h1>Personal Projects <a class="details-arrow" onclick="openDetails('projects')"> &#62; </a></h1>
+                        <p>PC Junkies webpage</p>
+                        <p>Solitaire autoplay program</p>
+                        <p>Personal portfolio website</p>
+                        <div id="cvbtn">
+                            <a id="cvBtn" href="../CV.pdf" target="_blank" rel="noopener noreferrer">&#8681; CV</a>
+                        </div>
                     </div>
                 </div>
-                <div id=degree class="scrollAnim">
+                <div style="padding: 3%;margin: auto" id=degree class="scrollAnim">
                     <h1>Degree <a class="details-arrow" onclick="openDetails('degree')"> &#62; </a></h1>
                     <p>BSc Computer Science, Second Year Student</p>
                     <p>The University of Sheffield</p>
@@ -84,6 +108,16 @@
                 </div>
             </div>
 
+            <div id="experience-details" class="second-part-details">
+                <a href="javascript:void(0)" class="closebtn-second-part" id="experienceCloseArrow" onclick="closeDetails('experience')">&times;</a>
+                <section id="experience-text">
+                    <h1>Work Experience</h1>
+                    <h2 style="margin-bottom: 0%;">Web Development, WordPress</h2>
+                    <ul>
+                        <li><a style="text-decoration: none;color: white;" href="https://studynetherlands.eu/" target="_blank" rel="noopener noreferrer">Study Netherlands, designed and developed their webisite </a></li>
+                    </ul>
+                </section>
+            </div>
             <div id="personal-details" class="second-part-details">
                 <a href="javascript:void(0)" class="closebtn-second-part" id="personalCloseArrow" onclick="closeDetails('projects')">&times;</a>
                 <section id="personal-text">
@@ -91,9 +125,15 @@
                     <ul>
                         <li onmouseover="displayImage('pc-junkies-screenshot')" onmouseout="hideImage('pc-junkies-screenshot')"  class="individualProjects">
                             <p> <a class="projectLink" href="../pc junkies/html/index.html" target="_blank" rel="noopener noreferrer">
-                                PC Junkies webpage</a> <br>
+                                <span style="font-size: 150%">PC Junkies webpage</span></a> <br>
                             A webpage developed for advertisement purposes of a small team that builds computers.</p>
                             <figure><a href="../pc junkies/html/index.html" target="_blank" rel="noopener noreferrer"> <img id="pc-junkies-screenshot" src="../images/pc-junkies-screenshot.png"> </a></figure>
+                        </li>
+                        <li onmouseover="displayImage('armyPlanner-screenshot')" onmouseout="hideImage('armyPlanner-screenshot')"  class="individualProjects">
+                            <p> 
+                                <span style="font-size: 150%">Solitaire autoplay program</span> <br>
+                                I was inspired to develop this application while I was serving at the military myself. The purpose of this application is for a user from the Army Base will register to the app all the personnel and the services that the personnel serves. Then the application will be able to generate a plan for the next week of the days out of each personnel and what service each personnel will serve during the week</p>
+                            <figure><img id="armyPlanner-screenshot" src="../images/armyPlanner-screenshot.png"> </figure>
                         </li>
                     </ul>
                 </section>
