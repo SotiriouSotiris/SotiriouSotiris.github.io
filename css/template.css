@@ -31,7 +31,7 @@ main{
 }
 #watermark{
     position: absolute;
-    width: 98%;
+    width: 95%;
     overflow: hidden;
     top: 20%;
     left: 5%;
@@ -78,9 +78,6 @@ main{
     border-radius: 20px;
     margin: 5% auto 5% auto;
     height: fit-content;
-}
-#experience-text li{
-    width: max-content;
 }
 #experience-text li:hover{
     border-bottom: 3px solid #EEC615;
@@ -158,9 +155,8 @@ main{
     transition: 0.2s;
 }
 #pc-junkies-screenshot, #armyPlanner-screenshot{
-    opacity: 70%;
     transition: 0.5s;
-    border-radius: 500px;
+    border-radius: 20px;
 }
 .closebtn-second-part{
     position: absolute;
@@ -259,6 +255,9 @@ main{
         color: rgb(238, 198, 21);
         transition: 0.5s;
     } */
+    #experience-text li{
+        width: max-content;
+    }
     #personal-text li p, #personal-text li figure{
         width: 50%;
         margin: 0.5%;
@@ -274,6 +273,10 @@ main{
     .individualProjects{
         display: flex;
         flex-direction: row;
+    }
+    #pc-junkies-screenshot, #armyPlanner-screenshot{
+        opacity: 70%;
+        border-radius: 500px;
     }
     .individualYears{
         display: flex;

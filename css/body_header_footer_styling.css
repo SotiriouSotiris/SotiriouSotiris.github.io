@@ -7,7 +7,6 @@ body{
     overflow-x: hidden;
     max-width: 2000px;
     margin: auto;
-    margin-top: 10px;
 }
 /*For any image in the body*/
 body img{
@@ -23,7 +22,7 @@ header{
 }
 header figure{
     width: 15%;
-    margin: 0px;
+    margin: 10px auto auto 10px;
 }
 .headerMenu{
     display: none;
@@ -31,17 +30,17 @@ header figure{
 #moon{
     width: 30px;
     height: 30px;
-    margin: 1% 5% 0 0%;
+    margin: 2% 5% 0 0%;
 }
 #sun{
     width: 40px;
     height: 40px;
-    margin: 1% 0% 0% auto;
+    margin: 2% 0% 0% auto;
     opacity: 0;
 }
 .theme-switch-wrapper {
     display: flex;
-    margin: 1% 1% 0 1%;
+    margin: 2% 1% 0 1%;
 }
 .theme-switch {
     display: inline-block;
@@ -160,7 +159,7 @@ footer{
     .headerMenu{
         display: block;
         font-size: 1.5em;
-        margin: 1% 2% 0% 2%;
+        margin: 2% 2% 0% 2%;
         color: rgb(0,0,128);
         border-bottom: none;
         height: min-content;
