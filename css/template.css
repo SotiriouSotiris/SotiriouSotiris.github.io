@@ -301,6 +301,12 @@ main{
         border-right: 4px solid rgb(0,0,128);
         padding-right: 2%;
     }
+    #third-part #aboutSelfdiv{
+        margin-left: 20%;
+    }
+    #third-part #aboutComdiv{
+        margin-right: 20%;
+    }
     #third-part #aboutComdiv{
         border-top: none;
         padding-top: 0px;
@@ -318,5 +324,16 @@ main{
 @media screen and (min-width:1200px){
     #intro-text h1{
         font-size: 300%;
+    }
+    #third-part #aboutSelfdiv{
+        margin-left: 30%;
+    }
+    #third-part #aboutComdiv{
+        margin-right: 30%;
+    }
+}
+@media screen and (min-width:2001px){
+    #watermark{
+        left: 0%;
     }
 }
