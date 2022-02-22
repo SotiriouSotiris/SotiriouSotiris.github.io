@@ -183,10 +183,10 @@ main{
     top: 10vh;
 }
 #third-part #aboutSelfdiv{
-    margin: 2%;
+    margin: 2% 0% 2% 0%;
 }
 #third-part #aboutComdiv{
-    margin: 2%;
+    margin: 2% 0% 2% 0%;
     border-top: 4px solid rgb(0,0,128);
     padding-top: 2em;
 }
