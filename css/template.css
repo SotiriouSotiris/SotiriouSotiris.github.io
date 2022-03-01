@@ -198,6 +198,22 @@ main{
     flex-direction: row;
     align-items: center;
 }
+#forth-part #emailText{
+    border-bottom: 3px solid transparent;
+    width: fit-content;
+}
+#emailText a{
+    text-decoration: none;
+    color: unset;
+}
+#forth-part #emailText:hover{
+    border-bottom: 3px solid #EEC615;
+    transition: 0.2s;
+}
+#forth-part #emailText:hover span{
+    color: #EEC615;
+    transition: 0.2s;
+}
 #instaForth, #githubForth, #linkedInForth {
     margin: 2%;
     opacity: 100%;
@@ -314,22 +330,6 @@ main{
     #third-part #aboutCom{
         border-left: 4px solid rgb(0,0,128);
         padding-left: 2%;
-    }
-    #forth-part #emailText{
-        border-bottom: 3px solid transparent;
-        width: fit-content;
-    }
-    #emailText a{
-        text-decoration: none;
-        color: unset;
-    }
-    #forth-part #emailText:hover{
-        border-bottom: 3px solid #EEC615;
-        transition: 0.2s;
-    }
-    #forth-part #emailText:hover span{
-        color: #EEC615;
-        transition: 0.2s;
     }
 }
 @media screen and (min-width:1100px){

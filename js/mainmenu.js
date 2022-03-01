@@ -36,19 +36,19 @@ function openDetails(typeOfDetails){
         document.getElementById("degree-details").style.width = "95%";
         document.getElementById("degree-details").style.height = "90%";
         document.getElementById("degree-details").style.color = "rgb(255,255,255)";
-        document.getElementById("degree-text").style.margin = "2% 3%";
+        document.getElementById("degree-text").style.margin = "2% 5%";
     }
     else if(typeOfDetails=='projects'){
         document.getElementById("personal-details").style.width = "95%";
         document.getElementById("personal-details").style.height = "90%";
         document.getElementById("personal-details").style.color = "rgb(255,255,255)";
-        document.getElementById("personal-text").style.margin = "2% 3%";
+        document.getElementById("personal-text").style.margin = "2% 5%";
     }
     else if(typeOfDetails=='experience'){
         document.getElementById("experience-details").style.width = "95%";
         document.getElementById("experience-details").style.height = "90%";
         document.getElementById("experience-details").style.color = "rgb(255,255,255)";
-        document.getElementById("experience-text").style.margin = "2% 3%";
+        document.getElementById("experience-text").style.margin = "2% 5%";
     }
 }
 function closeDetails(typeOfDetails){
