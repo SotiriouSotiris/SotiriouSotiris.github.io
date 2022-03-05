@@ -37,18 +37,24 @@ function openDetails(typeOfDetails){
         document.getElementById("degree-details").style.height = "90%";
         document.getElementById("degree-details").style.color = "rgb(255,255,255)";
         document.getElementById("degree-text").style.margin = "2% 5%";
+        document.getElementById("body").style.height = "100%";
+        document.getElementById("body").style.overflowY = "hidden";
     }
     else if(typeOfDetails=='projects'){
         document.getElementById("personal-details").style.width = "95%";
         document.getElementById("personal-details").style.height = "90%";
         document.getElementById("personal-details").style.color = "rgb(255,255,255)";
         document.getElementById("personal-text").style.margin = "2% 5%";
+        document.getElementById("body").style.height = "100%";
+        document.getElementById("body").style.overflowY = "hidden";
     }
     else if(typeOfDetails=='experience'){
         document.getElementById("experience-details").style.width = "95%";
         document.getElementById("experience-details").style.height = "90%";
         document.getElementById("experience-details").style.color = "rgb(255,255,255)";
         document.getElementById("experience-text").style.margin = "2% 5%";
+        document.getElementById("body").style.height = "100%";
+        document.getElementById("body").style.overflowY = "hidden";
     }
 }
 function closeDetails(typeOfDetails){
@@ -57,18 +63,24 @@ function closeDetails(typeOfDetails){
         document.getElementById("degree-details").style.height = "0%";
         document.getElementById("degree-details").style.color = "transparent";
         document.getElementById("degree-text").style.margin = "0%";
+        document.getElementById("body").style.height = "unset";
+        document.getElementById("body").style.overflowY = "unset";
     }
     else if(typeOfDetails=='projects'){
         document.getElementById("personal-details").style.width = "0";
         document.getElementById("personal-details").style.height = "0%";
         document.getElementById("personal-details").style.color = "transparent";
         document.getElementById("personal-text").style.margin = "0%";
+        document.getElementById("body").style.height = "unset";
+        document.getElementById("body").style.overflowY = "unset";
     }
     else if(typeOfDetails=='experience'){
         document.getElementById("experience-details").style.width = "0";
         document.getElementById("experience-details").style.height = "0%";
         document.getElementById("experience-details").style.color = "transparent";
         document.getElementById("experience-text").style.margin = "0%";
+        document.getElementById("body").style.height = "unset";
+        document.getElementById("body").style.overflowY = "unset";
     }
 }
 
