@@ -187,6 +187,7 @@ function changeTheme(){
     let experiencePart = document.getElementById("experience");
     let cvBtn = document.getElementById("cvBtn");
     let degreePart = document.getElementById("degree");
+    // let detailsArrows = document.getElementsByClassName("details-arrow");
     let experienceDetailsPart = document.getElementById("experience-details");
     let personalDetailsPart = document.getElementById("personal-details");
     let degreeDetailsPart = document.getElementById("degree-details");
