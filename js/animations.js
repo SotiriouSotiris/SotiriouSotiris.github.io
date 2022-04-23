@@ -11,6 +11,11 @@ if(window.innerWidth>=800){
     // .from( '.socialIcons', {opacity: 0, duration: 2, stagger: 0.2, x: "-200px"}, "-=3");
 }
 
+
+
+//The below code was not working properly, 
+//worked only the first time and then all the content disapeared because they were remaining at the start state
+
 // gsap.from( ".scrollAnim", {
 //     scrollTrigger: {
 //         trigger: '.scrollAnim',

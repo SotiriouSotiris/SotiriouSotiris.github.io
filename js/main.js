@@ -1,5 +1,6 @@
 /*author: Sotiris Sotiriou*/
 
+/*------------------ Main menu Nav Bar ------------------ */
 let menuBtnTwo = document.getElementById("menubtnTwo");
 function openNav() {
     document.getElementById("mySidenav").style.width = "50%";
@@ -30,6 +31,8 @@ function showMenu(){
         openMenu = false;
     }
 }
+
+/*------------------ Second Section Details Buttons ------------------ */
 
 function openDetails(typeOfDetails){
     if(typeOfDetails=='degree'){
@@ -84,6 +87,8 @@ function closeDetails(typeOfDetails){
     }
 }
 
+/*------------------ Personal Projects Details Section ------------------ */
+
 function displayImage(imageId){
     document.getElementById(imageId).style.opacity = "100%";
     document.getElementById(imageId).style.borderRadius = "20px";
@@ -92,6 +97,8 @@ function hideImage(imageId){
     document.getElementById(imageId).style.opacity = "70%";
     document.getElementById(imageId).style.borderRadius = "500px";
 }
+
+/*------------------ Back To The Top Button Functionality ------------------ */
 
 //Get the button
 let mybutton = document.getElementById("backToTop");
@@ -109,6 +116,8 @@ window.onscroll = function() {
 function backToTop(){
     document.querySelector('#header').scrollIntoView({behavior: 'smooth'});    
 }
+
+/*------------------ Responsive Resizing and Changing Theme Color ------------------ */
 
 let theme = "light";
 let image=document.getElementById("rect");
@@ -299,3 +308,19 @@ function changeTheme(){
         theme = "light";
     }
 }
+
+/*------------------ Getting The User's prefered Color Theme To Adapt The Website ------------------ */
+
+window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function(e){
+    theme = e.matches ? "dark" : "light";
+    console.log(theme);
+
+    changeTheme();
+
+    if(theme == "dark"){
+        toggleSwitch.checked = true;
+    }else{
+        toggleSwitch.checked = false;
+    }
+    
+});
