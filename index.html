@@ -22,6 +22,7 @@
        <a class="headerMenu" id="firstHeaderMenu" onclick="document.querySelector('#abilitiesPart').scrollIntoView({behavior: 'smooth'});" >Abilities</a>
        <a class="headerMenu" id="secondHeaderMenu" onclick="document.querySelector('#thirdPartContents').scrollIntoView({behavior: 'smooth'});">About Me</a>
        <a class="headerMenu" id="thirdHeaderMenu" onclick="document.querySelector('#forth-part').scrollIntoView({behavior: 'smooth'});">Contact</a>
+       
        <img id="sun" src="../images/icons8-sun-48White.png">
        <div class="theme-switch-wrapper">
             <label class="theme-switch" for="checkbox">
@@ -30,6 +31,7 @@
             </label>
         </div>
         <img id="moon" src="../images/moon-6693.png">
+
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a id="" onclick="document.querySelector('#abilitiesPart').scrollIntoView({behavior: 'smooth'});closeNav()" >Abilities</a>
@@ -61,7 +63,7 @@
                     <p id="github" class="socialIcons"><a href="https://github.com/SotirisSotiriou09" target="_blank" rel="noopener noreferrer"><img id="githubImage" src="../images/svg/githubIcon.svg"></a></p>
                     <p id="linkedIn" class="socialIcons"><a href="https://www.linkedin.com/in/sotiris-sotiriou-741327222/" target="_blank" rel="noopener noreferrer"><img id="linkedInImage" src="../images/svg/linkedin logo icon.svg" alt=""></a></p>
                 </div>
-                <!-- The code below is for menu buttons, I have move the buttons to the header but left these here in case I want them back -->
+                <!-- The code below is for menu buttons, I have moved the buttons to the header but left these here in case I want them back -->
                 <!-- <div id="desk-btns">
                     
                     <a id="desk-menu"  onclick="showMenu()"> <span id="menu-arrow"> &#10095; </span> </a> 
@@ -132,7 +134,7 @@
                         <li onmouseover="displayImage('armyPlanner-screenshot')" onmouseout="hideImage('armyPlanner-screenshot')"  class="individualProjects">
                             <p> 
                                 <span style="font-size: 150%">Military personnel and services management application</span> <br>
-                                I was inspired to develop this application while I was serving at the military myself. The purpose of this application is for a user from the Army Base will register to the app all the personnel and the services that the personnel serves. Then the application will be able to generate a plan for the next week of the days out of each personnel and what service each personnel will serve during the week</p>
+                                I was inspired to develop this application while I was serving at the military myself. The purpose of this application is for a user from the Army Base to register to the app all the personnel and the services that the personnel serves. Then the application will be able to generate a plan for the next week of the days out of each personnel and what service each personnel will serve during the week.</p>
                             <figure><img id="armyPlanner-screenshot" src="../images/armyPlanner-screenshot.png"> </figure>
                         </li>
                     </ul>
@@ -142,30 +144,7 @@
                 <a href="javascript:void(0)" class="closebtn-second-part" id="degreeCloseArrow" onclick="closeDetails('degree')">&times;</a>
                 <section id="degree-text">
                     <h1>Degree</h1>
-                    <h2 style="margin-bottom: 0%;">First year, Mark: 79%</h2>
-                    <section class="individualYears">
-                        <div class="modules">
-                            <h3 >Modules</h3>
-                            <ul style="list-style: none; padding-left: 0px; font-weight: 100;">
-                                <li> Introduction to Software Engineering</li>
-                                <li> Foundations of Computer Science </li>
-                                <li> Java Programming </li>
-                                <li> Machines and Intelligence </li>
-                                <li> Devices and Networks </li>
-                                <li> Web and Internet Technology </li>
-                                <li> Introduction to algorithms and datastructures </li>
-                            </ul>
-                        </div>
-                        <div class="assignments">
-                            <h3 >Key Assignments</h3>
-                            <ul style="list-style: none; padding-left: 0px">
-                                <li><span style="color: #EEC615">Personal Portfolio:</span> HTML/CSS/Javascript website as personal portfolio.</li>
-                                <li><span style="color: #EEC615">Mentee/Mentor Matching system:</span> Ruby web application for university students to sign up as mentee or mentor and match based on preferences for mentors to help mentees.</li>
-                                <li><span style="color: #EEC615">A Portuguese Wine browser:</span> A java application to interact and search wines from a list.</li>
-                                <li><span style="color: #EEC615">The Rambler’s Problem:</span> Finding the best path from any point, for a human to walk on a mountain using AI search algorithms.</li>
-                            </ul>
-                        </div>
-                    </section>
+
                     <h2 style="margin-bottom: 0%;">Second year</h2>
                     <section class="individualYears">
                         <div class="modules">
@@ -183,12 +162,38 @@
                         <div class="assignments">
                             <h3>Key Assignments</h3>
                             <ul style="list-style: none; padding-left: 0px;">
-                                <li><span style="color: #EEC615" >Chess pieces identifier:</span> Python program which trains it self using given examples of chess piece images and after training is able to identify individual chess pieces, with ver high scores of correctness.</li>
-                                <li><span style="color: #EEC615" >Property short rental system:</span> Java, Java Swing application where hosts can register their properties for the guests to rent them.</li>
-                                <li><span style="color: #EEC615" >Solitaire autoplay program:</span> Haskell program which initialise a random initial solitaire board and tries to solve it by making to appropriate moves.</li>
+                                <li><span style="color: #EEC615" >Chess Pieces Identifier:</span> Python program which trains it self using given examples of chess pieces images and after training is able to identify individual chess pieces, with very high scores of correctness.</li>
+                                <li><span style="color: #EEC615" >Property Short Rental System:</span> Java, Java Swing application where hosts can register their properties for the guests to rent them.</li>
+                                <li><span style="color: #EEC615" >Solitaire Autoplay Program:</span> Haskell program which initialises a random initial solitaire board and tries to solve it by making appropriate moves.</li>
                             </ul>
                         </div>
                     </section>
+
+                    <h2 style="margin-bottom: 0%;">First year, Mark: 79%</h2>
+                    <section class="individualYears">
+                        <div class="modules">
+                            <h3 >Modules</h3>
+                            <ul style="list-style: none; padding-left: 0px; font-weight: 100;">
+                                <li> Introduction to Software Engineering</li>
+                                <li> Foundations of Computer Science </li>
+                                <li> Java Programming </li>
+                                <li> Machines and Intelligence </li>
+                                <li> Devices and Networks </li>
+                                <li> Web and Internet Technology </li>
+                                <li> Introduction to Algorithms and Data Structures </li>
+                            </ul>
+                        </div>
+                        <div class="assignments">
+                            <h3 >Key Assignments</h3>
+                            <ul style="list-style: none; padding-left: 0px">
+                                <li><span style="color: #EEC615">Personal Portfolio:</span> HTML/CSS/Javascript website as personal portfolio.</li>
+                                <li><span style="color: #EEC615">Mentee/Mentor Matching system:</span> Ruby web application for university students to sign up as mentee or mentor and match based on preferences, the matching is done for mentors to help the mentees in their daily university life.</li>
+                                <li><span style="color: #EEC615">A Portuguese Wine browser:</span> A java application to interact and search wines from a list.</li>
+                                <li><span style="color: #EEC615">The Rambler’s Problem:</span> Finding the best path from any point, for a human to walk on a mountain using AI search algorithms.</li>
+                            </ul>
+                        </div>
+                    </section>
+
                     <p>More details about my degree: <a id="courseLink" href="https://www.sheffield.ac.uk/undergraduate/courses/2021/computer-science-bsc" target="_blank" rel="noopener noreferrer">University of Sheffield: BSc Computer Science</a></p>
                 </section>
             </div> 
@@ -210,8 +215,7 @@
                         My native language is Greek.
                         <br>
                         In my free time I play the 
-                        guitar, I own some Pi coins 
-                        and I watch lots of football.
+                        guitar, I really like cooking for myself and I watch lots of football.
                         <br>
                         Also, I served in the 
                         Cypriot army after finishing school.
@@ -220,14 +224,14 @@
                 <br>
                 <div id="aboutComdiv">
                     <p id="aboutCom">
-                        The first interaction I had with computing was at the age of 12 at my first ECDL class. Since then I have been in love with computing and started to explore the world of computing.
+                        The first interaction I had with computing was at the age of 12 at my first ECDL class. Since then I have been in love with computing and started to explore its possibilities futhermore.
                         <br>
                         Since then I learned 
-                        programming in Java (Java Swing, JDBC), Ruby( Sinatra, Ruby on Rails), Python (NumPy), Haskell,
+                        programming in Java (Java Swing, JDBC), Ruby (Sinatra, Ruby on Rails), Python (NumPy), Haskell,
                         HTML, CSS, MySQL, C++ and 
                         Vanila Javascript.
                         <br>
-                        Other Skills I have are Git, UML, I speak fluent English, I am an organised person 
+                        Other skills I have are Git, UML, I speak fluent English, I am an organised person 
                         and very good at time management.
                     </p>
                 </div>
@@ -250,7 +254,7 @@
         <p id="copyright">&copy; 2022 Sotiris Sotiriou</p>
     </footer>
 
-    <script src="../js/mainmenu.js"></script>
+    <script src="../js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js" integrity="sha512-5efjkDjhldlK+BrHauVYJpbjKrtNemLZksZWxd6Wdxvm06dceqWGLLNjZywOkvW7BF032ktHRMUOarbK9d60bg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../js/animations.js"></script>
