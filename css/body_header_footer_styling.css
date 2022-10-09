@@ -5,6 +5,8 @@ body{
     background-color: white;
     font-family: 'Mukta', sans-serif;
     overflow-x: hidden;
+}
+.content-wrapper{
     max-width: 2000px;
     margin: auto;
 }
@@ -179,8 +181,9 @@ footer{
         display: none;
     }
 }
-@media screen and (min-width:1500px){
-    /* body{
-        
-    } */
+@media screen and (min-width: 2001px){
+    #footer-text-wrapper{
+        width: 2000px;
+        margin: auto;
+    }
 }

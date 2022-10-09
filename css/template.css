@@ -350,6 +350,6 @@ main{
 }
 @media screen and (min-width:2001px){
     #watermark{
-        left: 0%;
+        left: auto;
     }
 }
