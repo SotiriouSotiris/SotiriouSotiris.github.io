@@ -79,9 +79,20 @@ main{
     margin: 5% auto 5% auto;
     height: fit-content;
 }
-#experience-text li:hover{
+#experience-text li a:hover{
     border-bottom: 3px solid #EEC615;
     transition: 0.2s;
+}
+#experience-text h2 a{
+    color: white;
+    text-decoration: none;
+}
+#experience-text h2 a:hover{
+    border-bottom: 3px solid #EEC615;
+    transition: 0.2s;
+}
+#experience-text h2 a:visited{
+    color: white;
 }
 .scrollAnim{
     opacity: 100%;
