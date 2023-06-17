@@ -5,6 +5,7 @@ body{
     background-color: white;
     font-family: 'Mukta', sans-serif;
     overflow-x: hidden;
+    margin: 0px;
 }
 .content-wrapper{
     max-width: 2000px;
@@ -21,6 +22,7 @@ header{
     display: flex;
     flex-direction: row;
     height: 15%;
+    margin: 8px;
 }
 header figure{
     width: 15%;
@@ -88,6 +90,11 @@ input:checked + .slider:before {
 
 .menubtn{
     margin-right: 5%;
+}
+#menubtnOne{
+    font-size: 30px;
+    cursor: pointer;
+    margin-top: 1%;
 }
 #menubtnTwo{
     position: fixed;
@@ -184,6 +191,5 @@ footer{
 @media screen and (min-width: 2001px){
     #footer-text-wrapper{
         width: 2000px;
-        margin: auto;
     }
 }

@@ -48,10 +48,10 @@
                 <img id="moon" src="../images/moon-6693.png">
             </div> -->
         </div>
-      <span id="menubtnOne" class="menubtn" style="font-size:30px;cursor:pointer" onclick="openNav(false)">&#9776;</span>
+      <span id="menubtnOne" class="menubtn" onclick="openNav(false)">&#9776;</span>
     </header>
-    <h2 id="watermark">Σωτήρης <br id="linebrake"> &#xA0;&#xA0;&#xA0;Σωτηρίου</h2>
     <main>
+        <h2 id="watermark">Σωτήρης <br id="linebrake"> &#xA0;&#xA0;&#xA0;Σωτηρίου</h2>
         <button onclick="backToTop()" id="backToTop" ><svg id="toTopSVG" class="svg-inline--fa fa-angle-up fa-w-10 fa-2x" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"></path></svg></button>
         <div id="first-part">
             <div id="intro-text">
@@ -79,11 +79,11 @@
         
         <div id="second-part">
             <div id="titleDiv">
-                <h1 id="abilitiesPart" style="margin: 0% 0% 0% 2%; font-size: 3em;">Abilities</h1>
+                <h1 id="abilitiesPart">Abilities</h1>
             </div>
             <div id="detailsDiv">
                 <div id="doubleSection">
-                    <div style="margin-top: 0;" id="experience" class="scrollAnim">
+                    <div id="experience" class="scrollAnim">
                         <h1>Work experience <a class="details-arrow" onclick="openDetails('experience')"> &#62; </a></h1>
                         <p>Full-Stack Developer Internship at Factory39</p>
                         <p>Web Development, WordPress</p>
@@ -98,7 +98,7 @@
                         </div>
                     </div>
                 </div>
-                <div style="padding: 3%;margin: auto" id=degree class="scrollAnim">
+                <div id=degree class="scrollAnim">
                     <h1>Degree <a class="details-arrow" onclick="openDetails('degree')"> &#62; </a></h1>
                     <p>BSc Computer Science, Third Year Student</p>
                     <p>The University of Sheffield</p>
@@ -112,7 +112,7 @@
                 <a href="javascript:void(0)" class="closebtn-second-part" id="experienceCloseArrow" onclick="closeDetails('experience')">&times;</a>
                 <section id="experience-text">
                     <h1>Work Experience</h1>
-                    <h2 style="margin-bottom: 0%;">Full-Stack Developer Internship at <a href="https://factory39.io/" target="_blank" >Factory39</a></h2>
+                    <h2>Full-Stack Developer Internship at <a href="https://factory39.io/" target="_blank" >Factory39</a></h2>
                     <ul>
                         <li>Three month internship at Factory39 over the summer of 2022.</li>
                         <li>Worked on both client projects and internal projects.</li>
@@ -123,7 +123,7 @@
                         <li>Created some web pages from scratch to be added to the company's website.</li> 
                         <li>Created an email signature for the company.</li> 
                     </ul>
-                    <h2 style="margin-bottom: 0%;">Web Development, WordPress</h2>
+                    <h2>Web Development, WordPress</h2>
                     <ul>
                         <li><a style="text-decoration: none;color: white;" href="https://studynetherlands.eu/" target="_blank" rel="noopener noreferrer">Study Netherlands, designed and developed their webisite </a></li>
                     </ul>
@@ -133,16 +133,16 @@
                 <a href="javascript:void(0)" class="closebtn-second-part" id="personalCloseArrow" onclick="closeDetails('projects')">&times;</a>
                 <section id="personal-text">
                     <h1>Personal Projects</h1>
-                    <ul style="padding-left: 0px;">
+                    <ul>
                         <li onmouseover="displayImage('pc-junkies-screenshot')" onmouseout="hideImage('pc-junkies-screenshot')"  class="individualProjects">
                             <p> <a class="projectLink" href="../pc junkies/html/index.html" target="_blank" rel="noopener noreferrer">
-                                <span style="font-size: 150%">PC Junkies webpage</span></a> <br>
+                                <span>PC Junkies webpage</span></a> <br>
                             A webpage developed for advertisement purposes of a small team that builds computers.</p>
                             <figure><a href="../pc junkies/html/index.html" target="_blank" rel="noopener noreferrer"> <img id="pc-junkies-screenshot" src="../images/pc-junkies-screenshot.png"> </a></figure>
                         </li>
                         <li onmouseover="displayImage('armyPlanner-screenshot')" onmouseout="hideImage('armyPlanner-screenshot')"  class="individualProjects">
                             <p> 
-                                <span style="font-size: 150%">Military personnel and services management application</span> <br>
+                                <span>Military personnel and services management application</span> <br>
                                 I was inspired to develop this application while I was serving at the military myself. The purpose of this application is for a user from the Army Base to register to the app all the personnel and the services that the personnel serves. Then the application will be able to generate a plan for the next week of the days out of each personnel and what service each personnel will serve during the week.</p>
                             <figure><img id="armyPlanner-screenshot" src="../images/armyPlanner-screenshot.png"> </figure>
                         </li>
@@ -154,37 +154,51 @@
                 <section id="degree-text">
                     <h1>Degree</h1>
 
-                    <h2 style="margin-bottom: 0%;">Third year</h2>
+                    <h2>Dissertation Project</h2>
+                    <section class="individualYears">
+                        <div style="width: initial;" class="modules">
+                            <h3>Subject of research</h3>
+                            <ul>
+                                <li class="gold-text" > Automated Assistance for Repairing Visual Bugs in Responsive Web Pages </li>
+                                <li> Developed an extension for a VS Code that analyses a webpage’s layout to find failures and suggests possible solutions, using JavaScript, the VS Code and Selenium APIs.  </li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <h2>Third year</h2>
                     <section class="individualYears">
                         <div class="modules">
                             <h3>Modules</h3>
-                            <ul style="list-style: none; padding-left: 0px">
+                            <ul>
                                 <li> Text Processing </li>
                                 <li> Speech Processing </li>
                                 <li> 3D Computer Graphics </li>
                                 <li> Finance and Law for Engineers</li>
                                 <li> The Intelligent Web </li>
                                 <li> The Internet of Things </li>
-                                <li> Software Reengineering </li>
+                                <li> Adaptive Intelligence </li>
                                 <li> Software Testing and Analysis </li>
                             </ul>
                         </div>
                         <div class="assignments">
                             <h3>Key Assignments</h3>
-                            <ul style="list-style: none; padding-left: 0px;">
-                                <li><span style="color: #EEC615" >Document Retrieval:</span> Python program which, given a huge collection of documents and a number of queries, retrieves the ten most relevant documents from the collection for each query.</li>
-                                <li><span style="color: #EEC615" >Sentiment Analysis:</span> Python program which runs a training method to create a model to be able to then identify the sentimetn of a short text comment.</li>
-                                <li><span style="color: #EEC615" >Speech processing assignment:</span> Python program which applies speech processing techniques and methods to develop and apply filters to modify recordings of speech to acheive certain effects.</li>
-                                <li><span style="color: #EEC615" >3D Computer Graphics assignment:</span> Java and OpenGL program which creates a 3D environment that contains a rotating sky, a room with an animated alien egg and two moving anglepoise lambs.</li>
+                            <ul>
+                                <li><span class="gold-text" >Document Retrieval:</span> Python program which, given a huge collection of documents and a number of queries, retrieves the ten most relevant documents from the collection for each query.</li>
+                                <li><span class="gold-text" >Sentiment Analysis:</span> Python program which runs a training method to create a model to be able to then identify the sentiment of a short text comment.</li>
+                                <li><span class="gold-text" >Speech Processing assignment:</span> Python program which applies speech processing techniques and methods to develop and apply filters to modify recordings of speech to acheive certain effects.</li>
+                                <li><span class="gold-text" >3D Computer Graphics assignment:</span> Java and OpenGL program which creates a 3D environment that contains a rotating sky, a room with an animated alien egg and two moving anglepoise lambs.</li>
+                                <li><span class="gold-text" >Bird Sightings assignment: </span> Node.js, Express and MongoDB web application developed for bird lovers to visit, register any bird sightings they had and also view sightings of others. </li>
+                                <li><span class="gold-text" >Chess Playing agent: </span> Python deep reinforcement learning agent trained to play a mini version of chess using a DNN and the SARSA and Q-Learning algorithms. </li>
+                                <li><span class="gold-text" >Connect4 IoT device: </span> C/C++ and using an IoT device called UnPhone which contains an ESP32S3 micro-controller. A UI and the functionality for a Connect4 game was developed with single device and multi device game modes. </li>
                             </ul>
                         </div>
                     </section>
 
-                    <h2 style="margin-bottom: 0%;">Second year, Mark: 75%</h2>
+                    <h2>Second year, Mark: 75%</h2>
                     <section class="individualYears">
                         <div class="modules">
                             <h3>Modules</h3>
-                            <ul style="list-style: none; padding-left: 0px">
+                            <ul>
                                 <li> Data Driven Computing </li>
                                 <li> Systems Desing and Security </li>
                                 <li> Functional Programming </li>
@@ -196,21 +210,21 @@
                         </div>
                         <div class="assignments">
                             <h3>Key Assignments</h3>
-                            <ul style="list-style: none; padding-left: 0px;">
-                                <li><span style="color: #EEC615" >Chess Pieces Identifier:</span> Python program which trains it self using given examples of chess pieces images and after training is able to identify individual chess pieces, with very high scores of correctness.</li>
-                                <li><span style="color: #EEC615" >Property Short Rental System:</span> Java, Java Swing application where hosts can register their properties for the guests to rent them.</li>
-                                <li><span style="color: #EEC615" >Solitaire Autoplay Program:</span> Haskell program which initialises a random initial solitaire board and tries to solve it by making appropriate moves.</li>
-                                <li><span style="color: #EEC615" >Robotics Assignment:</span> Various tasks are implemented, using Python and ROS, for a robot to complete in both a simulation environment and a real arena.</li>
-                                <li><span style="color: #EEC615" >Complain Report System:</span> Ruby on Rails website. Developed both admin and user systems for the users to submit complain reports for the admin to review.</li>
+                            <ul>
+                                <li><span class="gold-text" >Chess Pieces Identifier:</span> Python program which trains it self using given examples of chess pieces images and after training is able to identify individual chess pieces, with very high scores of correctness.</li>
+                                <li><span class="gold-text" >Property Short Rental System:</span> Java, Java Swing application where hosts can register their properties for the guests to rent them.</li>
+                                <li><span class="gold-text" >Solitaire Autoplay Program:</span> Haskell program which initialises a random initial solitaire board and tries to solve it by making appropriate moves.</li>
+                                <li><span class="gold-text" >Robotics Assignment:</span> Various tasks are implemented, using Python and ROS, for a robot to complete in both a simulation environment and a real arena.</li>
+                                <li><span class="gold-text" >Complain Report System:</span> Ruby on Rails website. Developed both admin and user systems for the users to submit complain reports for the admin to review.</li>
                             </ul>
                         </div>
                     </section>
 
-                    <h2 style="margin-bottom: 0%;">First year, Mark: 79%</h2>
+                    <h2>First year, Mark: 79%</h2>
                     <section class="individualYears">
                         <div class="modules">
                             <h3 >Modules</h3>
-                            <ul style="list-style: none; padding-left: 0px; font-weight: 100;">
+                            <ul>
                                 <li> Introduction to Software Engineering</li>
                                 <li> Foundations of Computer Science </li>
                                 <li> Java Programming </li>
@@ -222,11 +236,11 @@
                         </div>
                         <div class="assignments">
                             <h3 >Key Assignments</h3>
-                            <ul style="list-style: none; padding-left: 0px">
-                                <li><span style="color: #EEC615">Personal Portfolio:</span> HTML/CSS/Javascript website as personal portfolio.</li>
-                                <li><span style="color: #EEC615">Mentee/Mentor Matching system:</span> Ruby web application for university students to sign up as mentee or mentor and match based on preferences, the matching is done for mentors to help the mentees in their daily university life.</li>
-                                <li><span style="color: #EEC615">A Portuguese Wine browser:</span> A java application to interact and search wines from a list.</li>
-                                <li><span style="color: #EEC615">The Rambler’s Problem:</span> Finding the best path from any point, for a human to walk on a mountain using AI search algorithms.</li>
+                            <ul>
+                                <li><span class="gold-text">Personal Portfolio:</span> HTML/CSS/Javascript website as personal portfolio.</li>
+                                <li><span class="gold-text">Mentee/Mentor Matching system:</span> Ruby web application for university students to sign up as mentee or mentor and match based on preferences, the matching is done for mentors to help the mentees in their daily university life.</li>
+                                <li><span class="gold-text">A Portuguese Wine browser:</span> A java application to interact and search wines from a list.</li>
+                                <li><span class="gold-text">The Rambler’s Problem:</span> Finding the best path from any point, for a human to walk on a mountain using AI search algorithms.</li>
                             </ul>
                         </div>
                     </section>
@@ -241,7 +255,7 @@
                 <img id="cyprusFlag" src="../images/cyprus -png.png">
             </figure>
             <content id="thirdPartContents">
-                <h1 style="font-size: 3em;">About Me</h1>
+                <h1>About Me</h1>
                 <div id="aboutSelfdiv">
                     <p id="aboutSelf">
                         My name is Sotiris Sotiriou.
@@ -252,7 +266,7 @@
                         My native language is Greek.
                         <br>
                         In my free time I play the 
-                        guitar, I really like cooking for myself and I watch lots of football.
+                        guitar, I really like cooking for friends and I watch lots of football.
                         <br>
                         Also, I served in the 
                         Cypriot army after finishing school.
@@ -261,12 +275,11 @@
                 <br>
                 <div id="aboutComdiv">
                     <p id="aboutCom">
-                        The first interaction I had with computing was at the age of 12 at my first ECDL class. Since then I have been in love with computing and started to explore its possibilities futhermore.
+                        The first interaction I had with computing was at the age of 12 at my first ECDL class. I fell in love with computing and started to explore its possibilities futhermore.
                         <br>
-                        Since then I learned 
-                        programming in Java, Ruby, Ruby on Rails, Python, Haskell, HTML, CSS, MySQL, C++ and Vanila Javascript.
+                        Since then I learned to program in many different programming languages and I have been developing my skills in the field of computing.
                         <br>
-                        Other skills I have are Git, UML, I speak fluent English, I am an organised person 
+                        Other skills and knowledge I got are Version control systems, Content managment systems, UML, problem solving, I speak fluent English, I am an organised person 
                         and very good at time management.
                     </p>
                 </div>
@@ -274,7 +287,7 @@
         </div>
 
         <div id="forth-part">
-            <h1 style="font-size: 3em">Contact Me</h1>
+            <h1>Contact Me</h1>
             <p>Don't hesitate to send a message</p>
             <p id="emailText"> <a href="mailto:s.sotiriou62@gmail.com"> <span id="envelop">&#9993;&#xA0;&#xA0;</span>s.sotiriou62@gmail.com </a> </p>
             <div id="contact-social">

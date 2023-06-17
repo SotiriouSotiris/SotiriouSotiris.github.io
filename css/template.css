@@ -5,6 +5,7 @@ main{
     font-size: 1.5em;
     color: rgb(0,0,128);
     scroll-behavior: smooth;
+    margin: 8px;
 }
 #backToTop{
     width: 60px;
@@ -27,13 +28,12 @@ main{
 #first-part{
     display: flex;
     flex-direction: column;
-    padding: 0% 3% 0% 3%;
+    padding: 0% 5% 0% 5%;
 }
 #watermark{
     position: absolute;
     width: 95%;
     overflow: hidden;
-    top: 20%;
     left: 5%;
     font-size: 7em;
     color: rgb(0,0,128);
@@ -44,11 +44,9 @@ main{
     line-height: 100%;
 }
 #first-part figure{
-    margin: 0px;
+    margin: 0px -3% 0px auto;
     padding: 0px;
     max-width: 600px;
-    margin-right: -3%;
-    margin-left: auto;
 }
 #socialBtn-area{
     display: flex;
@@ -79,9 +77,19 @@ main{
     margin: 5% auto 5% auto;
     height: fit-content;
 }
+#degree{
+    padding: 3%;
+    margin: auto;
+}
+#experience{
+    margin-top: 0%;
+}
 #experience-text li a:hover{
     border-bottom: 3px solid #EEC615;
     transition: 0.2s;
+}
+#experience-text h2{
+    margin-bottom: 0%;
 }
 #experience-text h2 a{
     color: white;
@@ -93,6 +101,9 @@ main{
 }
 #experience-text h2 a:visited{
     color: white;
+}
+#experience-text ul{
+    padding-left: 0px;
 }
 .scrollAnim{
     opacity: 100%;
@@ -147,12 +158,20 @@ main{
 }
 #abilitiesPart{
     padding-left: 3%;
+    margin: 0% 0% 0% 2%;
+    font-size: 3em;
 }
 #detailsDiv{
     padding: 0% 3% 0% 3%;
 }
 .second-part-details h1{
     width: 70%;
+}
+#personal-text ul{
+    padding-left: 0px;
+}
+#personal-text ul li p span{
+    font-size: 150%;
 }
 #personal-text figure{
     margin: 1% 0%;
@@ -168,6 +187,16 @@ main{
 #pc-junkies-screenshot, #armyPlanner-screenshot{
     transition: 0.5s;
     border-radius: 20px;
+}
+#degree-details #degree-text h2{
+    margin-bottom: 0%;
+}
+#degree-details #degree-text section div ul{
+    list-style: none;
+    padding-left: 0px;
+}
+.gold-text{
+    color: #EEC615;
 }
 .closebtn-second-part{
     position: absolute;
@@ -193,6 +222,9 @@ main{
     position: relative;
     top: 10vh;
 }
+#third-part #thirdPartContents h1{
+    font-size: 3em;
+}
 #third-part #aboutSelfdiv{
     margin: 2% 0% 2% 0%;
 }
@@ -203,6 +235,9 @@ main{
 }
 #forth-part{
     padding: 0% 3% 0% 3%;
+}
+#forth-part h1{
+    font-size: 3em;
 }
 #contact-social{
     display: flex;
@@ -244,7 +279,6 @@ main{
         font-size: 250%;
     }
     #watermark{
-        top: 20%;
         font-size: 9em;
     }
     #insta, #facebook, #github, #linkedIn{
@@ -295,7 +329,6 @@ main{
     }
     #doubleSection, #degree{
         width: 45%;
-        margin: 1.5%;
     }
     .individualProjects{
         display: flex;
@@ -357,10 +390,5 @@ main{
     }
     #third-part #aboutComdiv{
         margin-right: 30%;
-    }
-}
-@media screen and (min-width:2001px){
-    #watermark{
-        left: auto;
     }
 }
