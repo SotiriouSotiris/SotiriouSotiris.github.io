@@ -1,0 +1,56 @@
+/* Small browser-compatibility overrides kept separate from the visual system. */
+.site-header {
+  left: 32px;
+  right: 32px;
+  width: auto;
+  transform: none !important;
+}
+
+.brand-copy {
+  color: var(--text);
+}
+
+.hero-cta .button-primary {
+  background-color: var(--cyan);
+  color: var(--ink) !important;
+}
+
+.hero-cta .button-primary:hover {
+  background-color: var(--acid);
+}
+
+.degree-dialog::backdrop {
+  background: rgba(3, 5, 8, .88);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+/* Safari can retain the first opacity frame on an animated top-layer dialog. */
+.degree-dialog[open] {
+  animation: none;
+  opacity: 1;
+  transform: none;
+}
+
+@media (max-width: 800px) {
+  .site-header {
+    left: 16px;
+    right: 16px;
+  }
+
+  .nav:not(.is-open) {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none;
+    transform: translateY(-12px) !important;
+  }
+
+  .nav.is-open {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto;
+    transform: none !important;
+  }
+}

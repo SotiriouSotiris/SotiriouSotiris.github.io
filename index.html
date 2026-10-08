@@ -1,312 +1,126 @@
-<!DOCTYPE html>
-<html>
-
+<!doctype html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta author="Sotiris Sotiriou">
-  <meta description="Webpage for Sotiris and his degree">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sotiris Sotiriou</title>
-  <link rel="stylesheet" href="../css/template.css">
-  <link rel="stylesheet" href="../css/body_header_footer_styling.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@600&display=swap" rel="stylesheet">
+  <meta name="author" content="Sotiris Sotiriou">
+  <meta name="description" content="Sotiris Sotiriou — software engineer building thoughtful, reliable digital systems.">
+  <meta name="theme-color" content="#07090d">
+  <title>Sotiris Sotiriou — Software Engineer</title>
+  <link rel="stylesheet" href="css/template.css">
+  <link rel="stylesheet" href="css/compat.css">
+  <script src="js/mainmenu.js" defer></script>
 </head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <canvas id="field" aria-hidden="true"></canvas>
 
-<body id="body">
-    <header id="header">
-       <figure>
-           <img id="logo" src="../images/logo.png">
-       </figure>
-       <a class="headerMenu" id="firstHeaderMenu" onclick="document.querySelector('#abilitiesPart').scrollIntoView({behavior: 'smooth'});" >Abilities</a>
-       <a class="headerMenu" id="secondHeaderMenu" onclick="document.querySelector('#thirdPartContents').scrollIntoView({behavior: 'smooth'});">About Me</a>
-       <a class="headerMenu" id="thirdHeaderMenu" onclick="document.querySelector('#forth-part').scrollIntoView({behavior: 'smooth'});">Contact</a>
-       
-       <img id="sun" src="../images/icons8-sun-48White.png">
-       <div class="theme-switch-wrapper">
-            <label class="theme-switch" for="checkbox">
-                <input type="checkbox" id="checkbox"/>
-                <div class="slider round"></div>
-            </label>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Sotiris Sotiriou, home">
+      <span class="brand-mark">SS</span>
+      <span class="brand-copy">Sotiris<br>Sotiriou</span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main navigation">
+      <a href="#work">Work</a><a href="#capabilities">Capabilities</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a class="status-pill" href="mailto:s.sotiriou62@gmail.com"><span></span> Available for ideas</a>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><i></i><i></i></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section-shell" aria-labelledby="hero-title">
+      <div class="hero-kicker reveal"><span>01 / Portfolio</span><span>Limassol, Cyprus <i class="live-dot"></i></span></div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">Software engineer · full-stack developer</p>
+          <h1 id="hero-title" class="reveal">I turn complex<br>problems into<br><em>clear systems.</em></h1>
+          <p class="hero-intro reveal">Computer Science graduate and engineer from Cyprus, building useful software across the stack—with care for the details people actually feel.</p>
+          <div class="hero-cta reveal">
+            <a class="button button-primary magnetic" href="#work" style="background-color:#5ce1e6;color:#07090d">Explore selected work <span>↘</span></a>
+            <a class="text-link" href="CV.pdf" target="_blank" rel="noopener noreferrer">Download CV <span>↗</span></a>
+          </div>
         </div>
-        <img id="moon" src="../images/moon-6693.png">
-
-        <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a id="" onclick="document.querySelector('#abilitiesPart').scrollIntoView({behavior: 'smooth'});closeNav()" >Abilities</a>
-            <a id="" onclick="document.querySelector('#thirdPartContents').scrollIntoView({behavior: 'smooth'});closeNav()">About Me</a>
-            <a id="" onclick="document.querySelector('#forth-part').scrollIntoView({behavior: 'smooth'});closeNav()">Contact</a>
-            <!-- <div id="changeModeSideNav">
-                <img id="sun" src="../images/icons8-sun-48White.png">
-                <div class="theme-switch-wrapper">
-                    <label class="theme-switch" for="checkbox">
-                        <input type="checkbox" id="checkbox"/>
-                        <div class="slider round"></div>
-                    </label>
-                </div>
-                <img id="moon" src="../images/moon-6693.png">
-            </div> -->
+        <div class="hero-visual reveal" data-tilt>
+          <div class="portrait-frame">
+            <div class="portrait-orbit orbit-one"></div><div class="portrait-orbit orbit-two"></div>
+            <img src="images/meRounded.png" alt="Sotiris Sotiriou smiling" width="720" height="1058">
+            <div class="image-scan"></div><span class="image-index">FIG. 01</span><span class="image-caption">ENGINEER / MAKER / HUMAN</span>
+          </div>
+          <div class="floating-card card-code"><span class="terminal-dots"><i></i><i></i><i></i></span><code><b>const</b> mindset = {<br>&nbsp;&nbsp;curious: <i>true</i>,<br>&nbsp;&nbsp;done: <i>false</i><br>};</code></div>
+          <div class="floating-card card-location"><span class="card-label">BASED IN</span><strong>34.7071° N<br>33.0226° E</strong></div>
         </div>
-      <span id="menubtnOne" class="menubtn" onclick="openNav(false)">&#9776;</span>
-    </header>
-    <main>
-        <h2 id="watermark">Σωτήρης <br id="linebrake"> &#xA0;&#xA0;&#xA0;Σωτηρίου</h2>
-        <button onclick="backToTop()" id="backToTop" ><svg id="toTopSVG" class="svg-inline--fa fa-angle-up fa-w-10 fa-2x" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"></path></svg></button>
-        <div id="first-part">
-            <div id="intro-text">
-                <h1>Sotiris Sotiriou</h1>
-                <p>BSc Computer Science<br>I am just a normal guy from Cyprus who loves coding.</p>
-                <div id="socialBtn-area">
-                    <p id="facebook" class="socialIcons"><a href="https://www.facebook.com/sotiris.sotiriou.3705/" target="_blank" rel="noopener noreferrer"><?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="100%" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" viewBox="0 0 512 512" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" style="fill:#1777f2;"/></svg></a></p>
-                    <p id="insta" class="socialIcons"><a href="https://www.instagram.com/sotirisotiriou/?hl=en" target="_blank" rel="noopener noreferrer"><?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="100%" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" viewBox="0 0 512 512" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M256,0c-69.526,0 -78.244,0.295 -105.549,1.541c-27.248,1.243 -45.858,5.57 -62.142,11.899c-16.834,6.542 -31.111,15.296 -45.342,29.528c-14.232,14.231 -22.986,28.508 -29.528,45.342c-6.329,16.283 -10.656,34.893 -11.899,62.141c-1.246,27.305 -1.54,36.023 -1.54,105.549c0,69.524 0.294,78.242 1.54,105.547c1.243,27.248 5.57,45.858 11.899,62.141c6.542,16.834 15.296,31.111 29.528,45.344c14.231,14.231 28.508,22.985 45.342,29.527c16.284,6.328 34.894,10.656 62.142,11.899c27.305,1.245 36.023,1.54 105.549,1.54c69.524,0 78.242,-0.295 105.547,-1.54c27.248,-1.243 45.858,-5.571 62.141,-11.899c16.834,-6.542 31.111,-15.296 45.344,-29.527c14.231,-14.233 22.985,-28.51 29.527,-45.344c6.328,-16.283 10.656,-34.893 11.899,-62.141c1.245,-27.305 1.54,-36.023 1.54,-105.547c0,-69.526 -0.295,-78.244 -1.54,-105.549c-1.243,-27.248 -5.571,-45.858 -11.899,-62.141c-6.542,-16.834 -15.296,-31.111 -29.527,-45.342c-14.233,-14.232 -28.51,-22.986 -45.344,-29.528c-16.283,-6.329 -34.893,-10.656 -62.141,-11.899c-27.305,-1.246 -36.023,-1.541 -105.547,-1.541Zm0,46.127c68.354,0 76.451,0.26 103.445,1.492c24.959,1.139 38.514,5.309 47.535,8.814c11.949,4.644 20.477,10.192 29.435,19.15c8.959,8.958 14.506,17.487 19.15,29.435c3.506,9.021 7.676,22.576 8.815,47.535c1.231,26.995 1.492,35.092 1.492,103.447c0,68.354 -0.261,76.451 -1.492,103.445c-1.139,24.959 -5.309,38.514 -8.815,47.535c-4.644,11.949 -10.191,20.477 -19.15,29.435c-8.958,8.959 -17.486,14.506 -29.435,19.15c-9.021,3.506 -22.576,7.676 -47.535,8.814c-26.99,1.232 -35.086,1.493 -103.445,1.493c-68.361,0 -76.455,-0.261 -103.447,-1.493c-24.959,-1.138 -38.514,-5.308 -47.535,-8.814c-11.949,-4.644 -20.477,-10.191 -29.436,-19.15c-8.958,-8.958 -14.506,-17.486 -19.149,-29.435c-3.506,-9.021 -7.676,-22.576 -8.815,-47.535c-1.232,-26.994 -1.492,-35.091 -1.492,-103.445c0,-68.355 0.26,-76.452 1.492,-103.447c1.139,-24.959 5.309,-38.514 8.815,-47.535c4.643,-11.948 10.191,-20.477 19.149,-29.435c8.959,-8.958 17.487,-14.506 29.436,-19.15c9.021,-3.505 22.576,-7.675 47.535,-8.814c26.995,-1.232 35.092,-1.492 103.447,-1.492Z" style="fill:url(#_Linear1);fill-rule:nonzero;"/><path d="M256,341.332c-47.129,0 -85.334,-38.205 -85.334,-85.332c0,-47.129 38.205,-85.334 85.334,-85.334c47.127,0 85.332,38.205 85.332,85.334c0,47.127 -38.205,85.332 -85.332,85.332Zm0,-216.792c-72.604,0 -131.46,58.856 -131.46,131.46c0,72.602 58.856,131.458 131.46,131.458c72.602,0 131.458,-58.856 131.458,-131.458c0,-72.604 -58.856,-131.46 -131.458,-131.46Z" style="fill:url(#_Linear2);fill-rule:nonzero;"/><path d="M423.372,119.346c0,16.967 -13.754,30.72 -30.72,30.72c-16.966,0 -30.72,-13.753 -30.72,-30.72c0,-16.966 13.754,-30.719 30.72,-30.719c16.966,0 30.72,13.753 30.72,30.719Z" style="fill:url(#_Linear3);fill-rule:nonzero;"/></g><defs><linearGradient gradientTransform="matrix(-149.618,494.3,-494.3,-149.618,300.81,-27.1283)" gradientUnits="userSpaceOnUse" id="_Linear1" x1="0" x2="1" y1="0" y2="0"><stop offset="0" style="stop-color:#515bd4;stop-opacity:1"/><stop offset="0.26" style="stop-color:#9510b8;stop-opacity:1"/><stop offset="0.66" style="stop-color:#e51804;stop-opacity:1"/><stop offset="1" style="stop-color:#feda77;stop-opacity:1"/></linearGradient><linearGradient gradientTransform="matrix(-149.618,494.3,-494.3,-149.618,300.81,-27.1283)" gradientUnits="userSpaceOnUse" id="_Linear2" x1="0" x2="1" y1="0" y2="0"><stop offset="0" style="stop-color:#515bd4;stop-opacity:1"/><stop offset="0.26" style="stop-color:#9510b8;stop-opacity:1"/><stop offset="0.66" style="stop-color:#e51804;stop-opacity:1"/><stop offset="1" style="stop-color:#ffbf00;stop-opacity:1"/></linearGradient><linearGradient gradientTransform="matrix(-149.618,494.3,-494.3,-149.618,300.81,-27.1283)" gradientUnits="userSpaceOnUse" id="_Linear3" x1="0" x2="1" y1="0" y2="0"><stop offset="0" style="stop-color:#515bd4;stop-opacity:1"/><stop offset="0.26" style="stop-color:#9510b8;stop-opacity:1"/><stop offset="0.66" style="stop-color:#e51804;stop-opacity:1"/><stop offset="1" style="stop-color:#ffbf00;stop-opacity:1"/></linearGradient></defs></svg></a></p>
-                    <p id="github" class="socialIcons"><a href="https://github.com/SotiriouSotiris" target="_blank" rel="noopener noreferrer"><img id="githubImage" src="../images/svg/githubIcon.svg"></a></p>
-                    <p id="linkedIn" class="socialIcons"><a href="https://www.linkedin.com/in/sotiris-sotiriou-741327222/" target="_blank" rel="noopener noreferrer"><img id="linkedInImage" src="../images/svg/linkedin logo icon.svg" alt=""></a></p>
-                </div>
-                <!-- The code below is for menu buttons, I have moved the buttons to the header but left these here in case I want them back -->
-                <!-- <div id="desk-btns">
-                    
-                    <a id="desk-menu"  onclick="showMenu()"> <span id="menu-arrow"> &#10095; </span> </a> 
-                    <a class="deskToOpen" id="desk-degreebtn" onclick="document.querySelector('#abilitiesPart').scrollIntoView({behavior: 'smooth'});" >Abilities</a>
-                    <a class="deskToOpen" id="desk-aboutbtn" onclick="document.querySelector('#thirdPartContents').scrollIntoView({behavior: 'smooth'});">About Me</a>
-                    <a class="deskToOpen" id="desk-contactbtn" onclick="document.querySelector('#forth-part').scrollIntoView({behavior: 'smooth'});">Contact</a>
-                </div> -->
-            </div>
-            <figure>
-                <img id="rect" src="../images/mobileVersionFinal.png">
-            </figure>
-        </div>
-        
-        <div id="second-part">
-            <div id="titleDiv">
-                <h1 id="abilitiesPart">Abilities</h1>
-            </div>
-            <div id="detailsDiv">
-                <div id="doubleSection">
-                    <div id="experience" class="scrollAnim">
-                        <h1>Work experience <a class="details-arrow" onclick="openDetails('experience')"> &#62; </a></h1>
-                        <p>Full-Stack Developer Internship at Factory39</p>
-                        <p>Web Development, WordPress</p>
-                    </div>
-                    <div id="personalProjects" class="scrollAnim">
-                        <h1>Personal Projects <a class="details-arrow" onclick="openDetails('projects')"> &#62; </a></h1>
-                        <p>PC Junkies webpage</p>
-                        <p>Military personnel and services management application</p>
-                        <p>Personal portfolio website</p>
-                        <div id="cvbtn">
-                            <a id="cvBtn" href="../CV.pdf" target="_blank" rel="noopener noreferrer">&#8681; CV</a>
-                        </div>
-                    </div>
-                </div>
-                <div id=degree class="scrollAnim">
-                    <h1>Degree <a class="details-arrow" onclick="openDetails('degree')"> &#62; </a></h1>
-                    <p>BSc Computer Science, Third Year Student</p>
-                    <p>The University of Sheffield</p>
-                    <figure>
-                        <img id="uniLogo" src="../images/UK_University+of+Sheffield.png">
-                    </figure>
-                </div>
-            </div>
+      </div>
+      <div class="hero-footer reveal"><span>Scroll to decode</span><div class="scroll-line"><i></i></div><span>© <span data-year></span> / V2.0</span></div>
+    </section>
 
-            <div id="experience-details" class="second-part-details">
-                <a href="javascript:void(0)" class="closebtn-second-part" id="experienceCloseArrow" onclick="closeDetails('experience')">&times;</a>
-                <section id="experience-text">
-                    <h1>Work Experience</h1>
-                    <h2>Full-Stack Developer Internship at <a href="https://factory39.io/" target="_blank" >Factory39</a></h2>
-                    <ul>
-                        <li>Three month internship at Factory39 over the summer of 2022.</li>
-                        <li>Worked on both client projects and internal projects.</li>
-                        <li>Mostly using Ruby on Rails, and Content Management Systems like Spina.</li>
-                        <li>Was introduced to technologies like Docker and Kubernetes.</li> 
-                        <li>Made feature additions and styling changes to websites.</li>
-                        <li>Created Ruby on Rails gems for sending emails and making payments.</li>
-                        <li>Created some web pages from scratch to be added to the company's website.</li> 
-                        <li>Created an email signature for the company.</li> 
-                    </ul>
-                    <h2>Web Development, WordPress</h2>
-                    <ul>
-                        <li><a style="text-decoration: none;color: white;" href="https://studynetherlands.eu/" target="_blank" rel="noopener noreferrer">Study Netherlands, designed and developed their webisite </a></li>
-                    </ul>
-                </section>
-            </div>
-            <div id="personal-details" class="second-part-details">
-                <a href="javascript:void(0)" class="closebtn-second-part" id="personalCloseArrow" onclick="closeDetails('projects')">&times;</a>
-                <section id="personal-text">
-                    <h1>Personal Projects</h1>
-                    <ul>
-                        <li onmouseover="displayImage('pc-junkies-screenshot')" onmouseout="hideImage('pc-junkies-screenshot')"  class="individualProjects">
-                            <p> <a class="projectLink" href="../pc junkies/html/index.html" target="_blank" rel="noopener noreferrer">
-                                <span>PC Junkies webpage</span></a> <br>
-                            A webpage developed for advertisement purposes of a small team that builds computers.</p>
-                            <figure><a href="../pc junkies/html/index.html" target="_blank" rel="noopener noreferrer"> <img id="pc-junkies-screenshot" src="../images/pc-junkies-screenshot.png"> </a></figure>
-                        </li>
-                        <li onmouseover="displayImage('armyPlanner-screenshot')" onmouseout="hideImage('armyPlanner-screenshot')"  class="individualProjects">
-                            <p> 
-                                <span>Military personnel and services management application</span> <br>
-                                I was inspired to develop this application while I was serving at the military myself. The purpose of this application is for a user from the Army Base to register to the app all the personnel and the services that the personnel serves. Then the application will be able to generate a plan for the next week of the days out of each personnel and what service each personnel will serve during the week.</p>
-                            <figure><img id="armyPlanner-screenshot" src="../images/armyPlanner-screenshot.png"> </figure>
-                        </li>
-                    </ul>
-                </section>
-            </div>
-            <div id="degree-details" class="second-part-details">
-                <a href="javascript:void(0)" class="closebtn-second-part" id="degreeCloseArrow" onclick="closeDetails('degree')">&times;</a>
-                <section id="degree-text">
-                    <h1>Degree</h1>
+    <section class="marquee" aria-label="Technology highlights"><div class="marquee-track">
+      <span>JavaScript</span><i>✦</i><span>Ruby on Rails</span><i>✦</i><span>Python</span><i>✦</i><span>Docker</span><i>✦</i><span>Java</span><i>✦</i><span>Problem Solving</span><i>✦</i>
+      <span>JavaScript</span><i>✦</i><span>Ruby on Rails</span><i>✦</i><span>Python</span><i>✦</i><span>Docker</span><i>✦</i><span>Java</span><i>✦</i><span>Problem Solving</span><i>✦</i>
+    </div></section>
 
-                    <h2>Dissertation Project</h2>
-                    <section class="individualYears">
-                        <div style="width: initial;" class="modules">
-                            <h3>Subject of research</h3>
-                            <ul>
-                                <li class="gold-text" > Automated Assistance for Repairing Visual Bugs in Responsive Web Pages </li>
-                                <li> Developed an extension for a VS Code that analyses a webpage’s layout to find failures and suggests possible solutions, using JavaScript, the VS Code and Selenium APIs.  </li>
-                            </ul>
-                        </div>
-                    </section>
+    <section class="work section-shell" id="work" aria-labelledby="work-title">
+      <div class="section-heading reveal"><div><p class="eyebrow">02 / Selected work</p><h2 id="work-title">Built to <em>work.</em><br>Designed to matter.</h2></div><p>A selection of projects across web, automation, and intelligent systems. Old work, new interface—for now.</p></div>
+      <div class="projects">
+        <article class="project project-featured reveal">
+          <a class="project-media" href="pc%20junkies/html/index.html" target="_blank" rel="noopener noreferrer" aria-label="Open PC Junkies project"><img src="images/pc-junkies-screenshot.png" alt="PC Junkies website interface" loading="lazy"><div class="project-overlay"></div><span class="project-open">View project ↗</span></a>
+          <div class="project-info"><span class="project-number">01</span><div><p class="project-type">Web development · Brand site</p><h3>PC Junkies</h3><p>An advertising website for a small team that builds custom computers.</p></div><div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div></div>
+        </article>
+        <article class="project reveal">
+          <div class="project-media"><img src="images/armyPlanner-screenshot.png" alt="Military personnel planner application interface" loading="lazy"><div class="project-overlay"></div><span class="project-open">Case study / archived</span></div>
+          <div class="project-info"><span class="project-number">02</span><div><p class="project-type">Scheduling · Automation</p><h3>Army Planner</h3><p>A personnel and services management tool inspired by first-hand military experience.</p></div><div class="project-tags"><span>Systems</span><span>Planning</span></div></div>
+        </article>
+        <article class="project project-concept reveal">
+          <div class="concept-visual" aria-hidden="true"><div class="bug-window"><div class="bug-toolbar"><i></i><i></i><i></i><span>viewport / 1440</span></div><div class="bug-layout"><span></span><span></span><span></span></div><div class="bug-target">LAYOUT_FAILURE <b>×</b></div><svg viewBox="0 0 500 260" preserveAspectRatio="none"><path d="M10 230 C 100 205, 130 35, 245 90 S 380 245, 490 20"/></svg></div></div>
+          <div class="project-info"><span class="project-number">03</span><div><p class="project-type">Dissertation · Developer tooling</p><h3>Visual Bug Repair</h3><p>A VS Code extension that detects responsive layout failures and suggests repairs.</p></div><div class="project-tags"><span>JavaScript</span><span>Selenium</span><span>VS Code API</span></div></div>
+        </article>
+      </div>
+    </section>
 
-                    <h2>Third year</h2>
-                    <section class="individualYears">
-                        <div class="modules">
-                            <h3>Modules</h3>
-                            <ul>
-                                <li> Text Processing </li>
-                                <li> Speech Processing </li>
-                                <li> 3D Computer Graphics </li>
-                                <li> Finance and Law for Engineers</li>
-                                <li> The Intelligent Web </li>
-                                <li> The Internet of Things </li>
-                                <li> Adaptive Intelligence </li>
-                                <li> Software Testing and Analysis </li>
-                            </ul>
-                        </div>
-                        <div class="assignments">
-                            <h3>Key Assignments</h3>
-                            <ul>
-                                <li><span class="gold-text" >Document Retrieval:</span> Python program which, given a huge collection of documents and a number of queries, retrieves the ten most relevant documents from the collection for each query.</li>
-                                <li><span class="gold-text" >Sentiment Analysis:</span> Python program which runs a training method to create a model to be able to then identify the sentiment of a short text comment.</li>
-                                <li><span class="gold-text" >Speech Processing assignment:</span> Python program which applies speech processing techniques and methods to develop and apply filters to modify recordings of speech to acheive certain effects.</li>
-                                <li><span class="gold-text" >3D Computer Graphics assignment:</span> Java and OpenGL program which creates a 3D environment that contains a rotating sky, a room with an animated alien egg and two moving anglepoise lambs.</li>
-                                <li><span class="gold-text" >Bird Sightings assignment: </span> Node.js, Express and MongoDB web application developed for bird lovers to visit, register any bird sightings they had and also view sightings of others. </li>
-                                <li><span class="gold-text" >Chess Playing agent: </span> Python deep reinforcement learning agent trained to play a mini version of chess using a DNN and the SARSA and Q-Learning algorithms. </li>
-                                <li><span class="gold-text" >Connect4 IoT device: </span> C/C++ and using an IoT device called UnPhone which contains an ESP32S3 micro-controller. A UI and the functionality for a Connect4 game was developed with single device and multi device game modes. </li>
-                            </ul>
-                        </div>
-                    </section>
+    <section class="capabilities section-shell" id="capabilities" aria-labelledby="capabilities-title">
+      <div class="section-heading reveal"><div><p class="eyebrow">03 / Capabilities</p><h2 id="capabilities-title">Thinking in layers.<br><em>Shipping as one.</em></h2></div><p>From first sketch to production logic, I’m happiest where product thinking and engineering meet.</p></div>
+      <div class="capability-grid">
+        <article class="capability-card reveal"><span class="capability-icon">&lt;/&gt;</span><span class="capability-index">01</span><h3>Full-stack<br>development</h3><p>Responsive interfaces, robust server logic, and the systems connecting them.</p><ul><li>Ruby on Rails</li><li>JavaScript</li><li>Node.js</li><li>CMS</li></ul></article>
+        <article class="capability-card reveal"><span class="capability-icon">⌁</span><span class="capability-index">02</span><h3>Intelligent<br>systems</h3><p>Turning data and algorithms into practical tools for real-world problems.</p><ul><li>Python</li><li>Machine learning</li><li>Information retrieval</li><li>IoT</li></ul></article>
+        <article class="capability-card reveal"><span class="capability-icon">◫</span><span class="capability-index">03</span><h3>Product<br>engineering</h3><p>Structured problem solving with a bias toward simple, maintainable outcomes.</p><ul><li>Docker</li><li>Git</li><li>Testing</li><li>UML</li></ul></article>
+      </div>
+    </section>
 
-                    <h2>Second year, Mark: 75%</h2>
-                    <section class="individualYears">
-                        <div class="modules">
-                            <h3>Modules</h3>
-                            <ul>
-                                <li> Data Driven Computing </li>
-                                <li> Systems Desing and Security </li>
-                                <li> Functional Programming </li>
-                                <li> Automata, Computation and Complexity </li>
-                                <li> Logic in Computer Science </li>
-                                <li> Robotics </li>
-                                <li> Software Hut </li>
-                            </ul>
-                        </div>
-                        <div class="assignments">
-                            <h3>Key Assignments</h3>
-                            <ul>
-                                <li><span class="gold-text" >Chess Pieces Identifier:</span> Python program which trains it self using given examples of chess pieces images and after training is able to identify individual chess pieces, with very high scores of correctness.</li>
-                                <li><span class="gold-text" >Property Short Rental System:</span> Java, Java Swing application where hosts can register their properties for the guests to rent them.</li>
-                                <li><span class="gold-text" >Solitaire Autoplay Program:</span> Haskell program which initialises a random initial solitaire board and tries to solve it by making appropriate moves.</li>
-                                <li><span class="gold-text" >Robotics Assignment:</span> Various tasks are implemented, using Python and ROS, for a robot to complete in both a simulation environment and a real arena.</li>
-                                <li><span class="gold-text" >Complain Report System:</span> Ruby on Rails website. Developed both admin and user systems for the users to submit complain reports for the admin to review.</li>
-                            </ul>
-                        </div>
-                    </section>
+    <section class="journey section-shell" aria-labelledby="journey-title">
+      <div class="journey-intro reveal"><p class="eyebrow">04 / Journey log</p><h2 id="journey-title">Experience,<br><em>not just output.</em></h2><p>The environments, study, and lived experience behind the code.</p></div>
+      <div class="timeline">
+        <article class="timeline-item reveal"><div class="timeline-marker"><span></span></div><p class="timeline-date">Summer 2022</p><div class="timeline-content"><p class="timeline-meta">Experience / Full-stack</p><h3>Developer Intern<br><a href="https://factory39.io/" target="_blank" rel="noopener noreferrer">Factory39 ↗</a></h3><p>Worked across client and internal projects using Ruby on Rails, Spina CMS, Docker, and Kubernetes. Built product features, Rails gems for email and payments, and new web experiences.</p></div></article>
+        <article class="timeline-item reveal"><div class="timeline-marker"><span></span></div><p class="timeline-date">BSc</p><div class="timeline-content"><p class="timeline-meta">Education / Computer Science</p><h3>University of<br>Sheffield</h3><p>Focused on intelligent systems, software analysis, web technologies, 3D graphics, speech and text processing, robotics, and the Internet of Things.</p><button class="inline-button" type="button" data-dialog-open="degree-dialog">View degree archive <span>+</span></button></div></article>
+        <article class="timeline-item reveal"><div class="timeline-marker"><span></span></div><p class="timeline-date">Always</p><div class="timeline-content"><p class="timeline-meta">Independent / Learning</p><h3>Building beyond<br>the brief</h3><p>Side projects spanning computer vision, reinforcement learning, scheduling tools, web platforms, robotics, and connected devices.</p></div></article>
+      </div>
+    </section>
 
-                    <h2>First year, Mark: 79%</h2>
-                    <section class="individualYears">
-                        <div class="modules">
-                            <h3 >Modules</h3>
-                            <ul>
-                                <li> Introduction to Software Engineering</li>
-                                <li> Foundations of Computer Science </li>
-                                <li> Java Programming </li>
-                                <li> Machines and Intelligence </li>
-                                <li> Devices and Networks </li>
-                                <li> Web and Internet Technology </li>
-                                <li> Introduction to Algorithms and Data Structures </li>
-                            </ul>
-                        </div>
-                        <div class="assignments">
-                            <h3 >Key Assignments</h3>
-                            <ul>
-                                <li><span class="gold-text">Personal Portfolio:</span> HTML/CSS/Javascript website as personal portfolio.</li>
-                                <li><span class="gold-text">Mentee/Mentor Matching system:</span> Ruby web application for university students to sign up as mentee or mentor and match based on preferences, the matching is done for mentors to help the mentees in their daily university life.</li>
-                                <li><span class="gold-text">A Portuguese Wine browser:</span> A java application to interact and search wines from a list.</li>
-                                <li><span class="gold-text">The Rambler’s Problem:</span> Finding the best path from any point, for a human to walk on a mountain using AI search algorithms.</li>
-                            </ul>
-                        </div>
-                    </section>
+    <section class="about section-shell" id="about" aria-labelledby="about-title">
+      <div class="about-visual reveal" data-tilt><div class="about-image-wrap"><img src="images/me3.jpg" alt="Portrait of Sotiris Sotiriou" loading="lazy" width="720" height="1058"><span class="about-coordinate">CY / 34.7° N</span></div><div class="cyprus-stamp"><span>ORIGIN</span><strong>CY</strong><span>LIMASSOL</span></div></div>
+      <div class="about-copy reveal"><p class="eyebrow">05 / Behind the screen</p><h2 id="about-title">Human first.<br><em>Engineer second.</em></h2><p class="about-lead">I’m Sotiris, born in Limassol, Cyprus. My first interaction with computing was an ECDL class at twelve—and the curiosity never really switched off.</p><div class="about-columns"><p>Since then, I’ve learned multiple programming languages, studied Computer Science at Sheffield, and kept building my skills through practical problems.</p><p>Away from a keyboard, I play guitar, cook for friends, watch a lot of football, and bring the organisation and resilience I learned serving in the Cypriot army.</p></div><div class="facts"><div><strong>Greek</strong><span>Native language</span></div><div><strong>English</strong><span>Fluent</span></div><div><strong>12</strong><span>Age I started</span></div></div></div>
+    </section>
 
-                    <p>More details about my degree: <a id="courseLink" href="https://www.sheffield.ac.uk/undergraduate/courses/2021/computer-science-bsc" target="_blank" rel="noopener noreferrer">University of Sheffield, BSc Computer Science</a></p>
-                </section>
-            </div> 
-        </div>
-        
-        <div id="third-part">
-            <figure>
-                <img id="cyprusFlag" src="../images/cyprus -png.png">
-            </figure>
-            <content id="thirdPartContents">
-                <h1>About Me</h1>
-                <div id="aboutSelfdiv">
-                    <p id="aboutSelf">
-                        My name is Sotiris Sotiriou.
-                        <br>
-                        I was born in Limassol, 
-                        Cyprus.
-                        <br>
-                        My native language is Greek.
-                        <br>
-                        In my free time I play the 
-                        guitar, I really like cooking for friends and I watch lots of football.
-                        <br>
-                        Also, I served in the 
-                        Cypriot army after finishing school.
-                    </p>
-                </div>
-                <br>
-                <div id="aboutComdiv">
-                    <p id="aboutCom">
-                        The first interaction I had with computing was at the age of 12 at my first ECDL class. I fell in love with computing and started to explore its possibilities futhermore.
-                        <br>
-                        Since then I learned to program in many different programming languages and I have been developing my skills in the field of computing.
-                        <br>
-                        Other skills and knowledge I got are Version control systems, Content managment systems, UML, problem solving, I speak fluent English, I am an organised person 
-                        and very good at time management.
-                    </p>
-                </div>
-            </content>
-        </div>
+    <section class="lab section-shell" aria-labelledby="lab-title">
+      <div class="lab-header reveal"><p class="eyebrow">06 / Experimental layer</p><h2 id="lab-title">The <em>playground.</em></h2><p>A space for future prototypes, fragments, and things that do not need a business case.</p></div>
+      <div class="lab-grid">
+        <article class="lab-card lab-card-large reveal"><div class="radar" aria-hidden="true"><span></span><i></i><b></b></div><div><span class="lab-status">Signal 001</span><h3>Systems radar</h3><p>Watching for useful patterns at the edge of technology and design.</p></div></article>
+        <article class="lab-card reveal"><div class="ascii" aria-hidden="true">01001011<br>10110100<br>01101101<br>11010010</div><div><span class="lab-status">Incoming</span><h3>New experiments</h3><p>Reserved for what comes next.</p></div></article>
+        <article class="lab-card quote-card reveal"><p>“Make it work,<br>make it clear,<br><em>then make it sing.</em>”</p><span>Working principle / 01</span></article>
+      </div>
+    </section>
 
-        <div id="forth-part">
-            <h1>Contact Me</h1>
-            <p>Don't hesitate to send a message</p>
-            <p id="emailText"> <a href="mailto:s.sotiriou62@gmail.com"> <span id="envelop">&#9993;&#xA0;&#xA0;</span>s.sotiriou62@gmail.com </a> </p>
-            <div id="contact-social">
-                <p id="facebookForth"><a href="https://www.facebook.com/sotiris.sotiriou.3705/" target="_blank" rel="noopener noreferrer"><?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="100%" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" viewBox="0 0 512 512" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" style="fill:#1777f2;"/></svg></a></p>
-                <p id="instaForth"><a href="https://www.instagram.com/sotirisotiriou/?hl=en" target="_blank" rel="noopener noreferrer"><?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="100%" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" viewBox="0 0 512 512" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M256,0c-69.526,0 -78.244,0.295 -105.549,1.541c-27.248,1.243 -45.858,5.57 -62.142,11.899c-16.834,6.542 -31.111,15.296 -45.342,29.528c-14.232,14.231 -22.986,28.508 -29.528,45.342c-6.329,16.283 -10.656,34.893 -11.899,62.141c-1.246,27.305 -1.54,36.023 -1.54,105.549c0,69.524 0.294,78.242 1.54,105.547c1.243,27.248 5.57,45.858 11.899,62.141c6.542,16.834 15.296,31.111 29.528,45.344c14.231,14.231 28.508,22.985 45.342,29.527c16.284,6.328 34.894,10.656 62.142,11.899c27.305,1.245 36.023,1.54 105.549,1.54c69.524,0 78.242,-0.295 105.547,-1.54c27.248,-1.243 45.858,-5.571 62.141,-11.899c16.834,-6.542 31.111,-15.296 45.344,-29.527c14.231,-14.233 22.985,-28.51 29.527,-45.344c6.328,-16.283 10.656,-34.893 11.899,-62.141c1.245,-27.305 1.54,-36.023 1.54,-105.547c0,-69.526 -0.295,-78.244 -1.54,-105.549c-1.243,-27.248 -5.571,-45.858 -11.899,-62.141c-6.542,-16.834 -15.296,-31.111 -29.527,-45.342c-14.233,-14.232 -28.51,-22.986 -45.344,-29.528c-16.283,-6.329 -34.893,-10.656 -62.141,-11.899c-27.305,-1.246 -36.023,-1.541 -105.547,-1.541Zm0,46.127c68.354,0 76.451,0.26 103.445,1.492c24.959,1.139 38.514,5.309 47.535,8.814c11.949,4.644 20.477,10.192 29.435,19.15c8.959,8.958 14.506,17.487 19.15,29.435c3.506,9.021 7.676,22.576 8.815,47.535c1.231,26.995 1.492,35.092 1.492,103.447c0,68.354 -0.261,76.451 -1.492,103.445c-1.139,24.959 -5.309,38.514 -8.815,47.535c-4.644,11.949 -10.191,20.477 -19.15,29.435c-8.958,8.959 -17.486,14.506 -29.435,19.15c-9.021,3.506 -22.576,7.676 -47.535,8.814c-26.99,1.232 -35.086,1.493 -103.445,1.493c-68.361,0 -76.455,-0.261 -103.447,-1.493c-24.959,-1.138 -38.514,-5.308 -47.535,-8.814c-11.949,-4.644 -20.477,-10.191 -29.436,-19.15c-8.958,-8.958 -14.506,-17.486 -19.149,-29.435c-3.506,-9.021 -7.676,-22.576 -8.815,-47.535c-1.232,-26.994 -1.492,-35.091 -1.492,-103.445c0,-68.355 0.26,-76.452 1.492,-103.447c1.139,-24.959 5.309,-38.514 8.815,-47.535c4.643,-11.948 10.191,-20.477 19.149,-29.435c8.959,-8.958 17.487,-14.506 29.436,-19.15c9.021,-3.505 22.576,-7.675 47.535,-8.814c26.995,-1.232 35.092,-1.492 103.447,-1.492Z" style="fill:url(#_Linear1);fill-rule:nonzero;"/><path d="M256,341.332c-47.129,0 -85.334,-38.205 -85.334,-85.332c0,-47.129 38.205,-85.334 85.334,-85.334c47.127,0 85.332,38.205 85.332,85.334c0,47.127 -38.205,85.332 -85.332,85.332Zm0,-216.792c-72.604,0 -131.46,58.856 -131.46,131.46c0,72.602 58.856,131.458 131.46,131.458c72.602,0 131.458,-58.856 131.458,-131.458c0,-72.604 -58.856,-131.46 -131.458,-131.46Z" style="fill:url(#_Linear2);fill-rule:nonzero;"/><path d="M423.372,119.346c0,16.967 -13.754,30.72 -30.72,30.72c-16.966,0 -30.72,-13.753 -30.72,-30.72c0,-16.966 13.754,-30.719 30.72,-30.719c16.966,0 30.72,13.753 30.72,30.719Z" style="fill:url(#_Linear3);fill-rule:nonzero;"/></g><defs><linearGradient gradientTransform="matrix(-149.618,494.3,-494.3,-149.618,300.81,-27.1283)" gradientUnits="userSpaceOnUse" id="_Linear1" x1="0" x2="1" y1="0" y2="0"><stop offset="0" style="stop-color:#515bd4;stop-opacity:1"/><stop offset="0.26" style="stop-color:#9510b8;stop-opacity:1"/><stop offset="0.66" style="stop-color:#e51804;stop-opacity:1"/><stop offset="1" style="stop-color:#feda77;stop-opacity:1"/></linearGradient><linearGradient gradientTransform="matrix(-149.618,494.3,-494.3,-149.618,300.81,-27.1283)" gradientUnits="userSpaceOnUse" id="_Linear2" x1="0" x2="1" y1="0" y2="0"><stop offset="0" style="stop-color:#515bd4;stop-opacity:1"/><stop offset="0.26" style="stop-color:#9510b8;stop-opacity:1"/><stop offset="0.66" style="stop-color:#e51804;stop-opacity:1"/><stop offset="1" style="stop-color:#ffbf00;stop-opacity:1"/></linearGradient><linearGradient gradientTransform="matrix(-149.618,494.3,-494.3,-149.618,300.81,-27.1283)" gradientUnits="userSpaceOnUse" id="_Linear3" x1="0" x2="1" y1="0" y2="0"><stop offset="0" style="stop-color:#515bd4;stop-opacity:1"/><stop offset="0.26" style="stop-color:#9510b8;stop-opacity:1"/><stop offset="0.66" style="stop-color:#e51804;stop-opacity:1"/><stop offset="1" style="stop-color:#ffbf00;stop-opacity:1"/></linearGradient></defs></svg></a></p>
-                <p id="githubForth"><a href="https://github.com/SotiriouSotiris" target="_blank" rel="noopener noreferrer"><img id="githubImageForth" src="../images/svg/githubIcon.svg"></a></p>
-                <p id="linkedInForth"><a href="https://www.linkedin.com/in/sotiris-sotiriou-741327222/" target="_blank" rel="noopener noreferrer"><img id="linkedInImage" src="../images/svg/linkedin logo icon.svg" alt=""></a></p>
-            </div>
-        </div>
-    </main>
-    <footer id="footer">
-        <div id="footer-text-wrapper">
-            <p id="copyright">&copy; 2023 Sotiris Sotiriou</p>
-        </div>
-    </footer>
- 
-    <script src="../js/mainmenu.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js" integrity="sha512-5efjkDjhldlK+BrHauVYJpbjKrtNemLZksZWxd6Wdxvm06dceqWGLLNjZywOkvW7BF032ktHRMUOarbK9d60bg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="../js/animations.js"></script>
+    <section class="contact section-shell" id="contact" aria-labelledby="contact-title">
+      <div class="contact-grid"><div class="reveal"><p class="eyebrow">07 / Start a conversation</p><h2 id="contact-title">Have a problem<br>worth solving?</h2></div><div class="contact-action reveal"><p>I’m always interested in ambitious products, difficult engineering challenges, and good conversations.</p><a class="email-link magnetic" href="mailto:s.sotiriou62@gmail.com"><span>Let’s build something</span><i>↗</i></a><a class="email-address" href="mailto:s.sotiriou62@gmail.com">s.sotiriou62@gmail.com</a></div></div>
+      <div class="contact-footer"><div class="social-links"><a href="https://github.com/SotiriouSotiris" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/sotiris-sotiriou-741327222/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://www.instagram.com/sotirisotiriou/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></div><p>Designed &amp; engineered in Cyprus · <span data-year></span></p><a href="#top">Back to orbit ↑</a></div>
+    </section>
+  </main>
+
+  <dialog class="degree-dialog" id="degree-dialog" aria-labelledby="degree-dialog-title">
+    <button class="dialog-close" type="button" data-dialog-close aria-label="Close degree archive">×</button><p class="eyebrow">Academic archive</p><h2 id="degree-dialog-title">BSc Computer Science</h2><p class="dialog-lead">The University of Sheffield</p>
+    <div class="degree-grid"><article><span>Dissertation</span><h3>Automated Assistance for Repairing Visual Bugs in Responsive Web Pages</h3><p>Developed a VS Code extension using JavaScript and Selenium APIs to analyse layout failures and suggest possible solutions.</p></article><article><span>Intelligent systems</span><h3>Learning &amp; search</h3><p>Document retrieval, sentiment analysis, chess-playing reinforcement learning, and automated path finding.</p></article><article><span>Applied engineering</span><h3>Software &amp; devices</h3><p>3D graphics, speech processing, robotics with ROS, Ruby on Rails systems, and a connected IoT game.</p></article></div>
+    <a class="text-link" href="https://www.sheffield.ac.uk/undergraduate/courses/2021/computer-science-bsc" target="_blank" rel="noopener noreferrer">University course details ↗</a>
+  </dialog>
+  <div class="cursor-dot" aria-hidden="true"></div>
 </body>
 </html>
