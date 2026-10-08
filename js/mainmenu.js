@@ -28,7 +28,7 @@
   const revealItems = document.querySelectorAll('.reveal');
   if (reducedMotion) {
     revealItems.forEach((item) => item.classList.add('is-visible'));
-  } else {
+  } else if ('IntersectionObserver' in window) {
     const revealObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
@@ -38,8 +38,16 @@
     }, { threshold: 0.12, rootMargin: '0px 0px -40px' });
     revealItems.forEach((item, index) => {
       item.style.transitionDelay = `${Math.min(index % 4, 3) * 70}ms`;
-      revealObserver.observe(item);
+      const bounds = item.getBoundingClientRect();
+      if (bounds.top < window.innerHeight * 1.08 && bounds.bottom > 0) {
+        item.classList.add('is-visible');
+      } else {
+        revealObserver.observe(item);
+      }
     });
+    document.documentElement.classList.add('motion-ready');
+  } else {
+    revealItems.forEach((item) => item.classList.add('is-visible'));
   }
 
   const sections = [...document.querySelectorAll('main section[id]')];

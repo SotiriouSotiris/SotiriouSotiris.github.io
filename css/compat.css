@@ -1,4 +1,19 @@
 /* Small browser-compatibility overrides kept separate from the visual system. */
+.reveal {
+  opacity: 1;
+  transform: none;
+}
+
+.motion-ready .reveal {
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+.motion-ready .reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .site-header {
   left: 32px;
   right: 32px;
