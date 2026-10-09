@@ -175,7 +175,7 @@
   border-radius: 30px;
   background: var(--odo);
   box-shadow: 0 45px 110px rgba(0, 0, 0, .55), 0 0 0 8px rgba(239, 255, 0, .035);
-  transform: rotate(2deg);
+  transform: none;
 }
 .odo-product-animation img {
   width: 100%;
@@ -183,8 +183,9 @@
   border-radius: 21px;
   object-fit: contain;
 }
-@media (hover: hover) and (pointer: fine) {
+@media (min-width: 801px) and (hover: hover) and (pointer: fine) {
   .odo-proof:hover .odo-product-image { transform:rotate(0) translateY(-8px); box-shadow:0 55px 130px rgba(0,0,0,.62),0 0 0 8px rgba(239,255,0,.035); }
+  .odo-proof:hover .odo-product-image.odo-product-animation { transform:rotate(-1deg) translateY(-8px) scale(1.01); }
 }
 @media (hover: none), (pointer: coarse) {
   .odo-product-image,
