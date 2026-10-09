@@ -166,7 +166,6 @@
   transition: transform .6s cubic-bezier(.2, .8, .2, 1), box-shadow .6s;
 }
 .odo-product-image::after { content:""; position:absolute; inset:0; pointer-events:none; background:linear-gradient(115deg,rgba(255,255,255,.12),transparent 24%); }
-.odo-proof:hover .odo-product-image { transform:rotate(0) translateY(-8px); box-shadow:0 55px 130px rgba(0,0,0,.62),0 0 0 8px rgba(239,255,0,.035); }
 .odo-product-image img { width:100%; height:auto; }
 .odo-product-image.odo-product-animation {
   width: min(84%, 480px);
@@ -183,6 +182,13 @@
   height: 100%;
   border-radius: 21px;
   object-fit: contain;
+}
+@media (hover: hover) and (pointer: fine) {
+  .odo-proof:hover .odo-product-image { transform:rotate(0) translateY(-8px); box-shadow:0 55px 130px rgba(0,0,0,.62),0 0 0 8px rgba(239,255,0,.035); }
+}
+@media (hover: none), (pointer: coarse) {
+  .odo-product-image,
+  .odo-product-image.odo-product-animation { transform:none; }
 }
 .odo-proof::before {
   content: "";
@@ -412,7 +418,7 @@
   .odo-actions { align-items:flex-start; flex-direction:column; }
   .odo-proof { padding:20px 0 0; display:block; }
   .odo-product-image { width:100%; border-radius:12px; transform:none; }
-  .odo-product-image.odo-product-animation { width:100%; padding:8px; border-radius:20px; }
+  .odo-product-image.odo-product-animation { width:min(100%,480px); margin-inline:auto; padding:8px; border-radius:20px; transform:none; }
   .odo-product-animation img { border-radius:13px; }
   .proof-note { position:relative; left:auto; bottom:auto; width:100%; margin-top:14px; }
   .odo-system { padding:26px 18px; }
