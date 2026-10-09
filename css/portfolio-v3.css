@@ -7,13 +7,14 @@
 .nav { gap: 25px; }
 .nav a { font-size: 10px; }
 
-/* One source portrait, composed differently for each context. */
-.portrait-frame img {
-  right: 0;
-  bottom: 0;
+/* Keep the hero portrait flush with every edge of its clipped frame. */
+.portrait-frame > img {
+  inset: 0;
   width: 100%;
   height: 100%;
-  object-position: 50% center;
+  max-width: none;
+  object-fit: cover;
+  object-position: 50% 50%;
   filter: saturate(.72) contrast(1.1) brightness(.76);
   mix-blend-mode: normal;
 }
@@ -382,7 +383,7 @@
 }
 
 @media (max-width: 520px) {
-  .portrait-frame img { object-position: 50% center; }
+  .portrait-frame > img { object-position: 50% 50%; }
   .about-image-wrap { height: 500px; }
   .about-image-wrap img { object-position: 50% center; }
   .odo-heading h2,.console-heading h2 { font-size:clamp(52px,18vw,78px); }
