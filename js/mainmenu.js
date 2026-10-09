@@ -25,6 +25,11 @@
   });
   nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
 
+  document.querySelector('[data-back-top]')?.addEventListener('click', (event) => {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: reducedMotion ? 'auto' : 'smooth' });
+  });
+
   const revealItems = document.querySelectorAll('.reveal');
   if (reducedMotion) {
     revealItems.forEach((item) => item.classList.add('is-visible'));
@@ -79,6 +84,89 @@
     if (outside) closeDialog();
   });
   dialog.addEventListener('close', () => document.body.classList.remove('dialog-open'));
+
+  const consoleCommands = {
+    now: {
+      prompt: 'status --current',
+      output: [
+        '> role.01      Co-founder & Founding Engineer @ ODO',
+        '> role.02      Mid Full-Stack Software Engineer @ Factory39',
+        '> location     Limassol, Cyprus',
+        '> focus        product delivery / architecture / operations',
+        '',
+        '[ok] building across web, iOS, and Android'
+      ]
+    },
+    architecture: {
+      prompt: 'inspect odo --architecture',
+      output: [
+        '> clients      responsive web / iOS / Android',
+        '> product      Ruby on Rails + Hotwire Native',
+        '> data         PostgreSQL / background processing / caching',
+        '> billing      Stripe / Apple / Google Play',
+        '> operations   GitHub Actions / Railway / Sentry',
+        '',
+        '[ok] one product architecture, multiple surfaces'
+      ]
+    },
+    'open-source': {
+      prompt: 'ls --open-source',
+      output: [
+        '> cv_agent_builder/',
+        '  evidence-first toolkit for reproducible CV generation',
+        '> frozen_string_literal_ruby/',
+        '  focused Ruby workflow automation for VS Code',
+        '> init_mate/',
+        '  Ruby initializer assistant written in TypeScript',
+        '',
+        '[ok] public tools, practical problems'
+      ]
+    },
+    principles: {
+      prompt: 'cat engineering-principles.md',
+      output: [
+        '01  Understand the product before shaping the abstraction.',
+        '02  Make the system clear before making it clever.',
+        '03  Treat tests, monitoring, and support as product work.',
+        '04  Own the result beyond the merge button.',
+        '05  Leave the codebase easier for the next engineer.',
+        '',
+        '[ok] make it work, make it clear, make it last'
+      ]
+    }
+  };
+
+  const consoleButtons = [...document.querySelectorAll('[data-console-command]')];
+  const consoleOutput = document.querySelector('[data-console-output]');
+  const consolePrompt = document.querySelector('[data-console-prompt]');
+  const sessionId = document.querySelector('[data-session-id]');
+  if (sessionId) sessionId.textContent = Math.random().toString(16).slice(2, 6).toUpperCase();
+
+  const renderConsole = (commandName) => {
+    const command = consoleCommands[commandName];
+    if (!command || !consoleOutput || !consolePrompt) return;
+    consolePrompt.textContent = command.prompt;
+    const content = command.output.join('\n');
+    consoleOutput.classList.remove('is-typing');
+    consoleOutput.textContent = content;
+    if (reducedMotion) {
+      return;
+    }
+    void consoleOutput.offsetWidth;
+    consoleOutput.classList.add('is-typing');
+  };
+
+  consoleButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      consoleButtons.forEach((item) => {
+        const active = item === button;
+        item.classList.toggle('is-active', active);
+        item.setAttribute('aria-selected', String(active));
+      });
+      renderConsole(button.dataset.consoleCommand);
+    });
+  });
+  renderConsole('now');
 
   if (!reducedMotion && window.matchMedia('(pointer: fine)').matches) {
     const cursor = document.querySelector('.cursor-dot');
