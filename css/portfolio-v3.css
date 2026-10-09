@@ -6,6 +6,19 @@
 
 .nav { gap: 25px; }
 .nav a { font-size: 10px; }
+
+/* One source portrait, composed differently for each context. */
+.portrait-frame img {
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-position: 50% center;
+  filter: saturate(.72) contrast(1.1) brightness(.76);
+  mix-blend-mode: normal;
+}
+.about-image-wrap { height: clamp(520px, 48vw, 650px); }
+.about-image-wrap img { object-position: 50% center; }
 .hero-intro { max-width: 650px; }
 
 .odo-showcase,
@@ -369,6 +382,9 @@
 }
 
 @media (max-width: 520px) {
+  .portrait-frame img { object-position: 50% center; }
+  .about-image-wrap { height: 500px; }
+  .about-image-wrap img { object-position: 50% center; }
   .odo-heading h2,.console-heading h2 { font-size:clamp(52px,18vw,78px); }
   .odo-art { min-height:290px; border-radius:12px; }
   .odo-art img { object-position:center; }
